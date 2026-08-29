@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of [Your Name] - Software Quality Assurance (QA) Engineer specializing in Test Automation, API Testing, Performance Testing, and Manual QA.">
+  <meta name="keywords" content="Software Quality Assurance, QA Engineer, SDET, Test Automation, Selenium, Playwright, Cypress, API Testing, Postman, Manual Testing">
+  <meta name="author" content="[Your Name]">
+
+  <title>[Your Name] | Software Quality Assurance (QA) Engineer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header & Navigation
+       ======================================================================== -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Home">
+        <div class="brand-icon">QA</div>
+        <div class="brand-info">
+          <span class="brand-name"><span class="ph">[Your Name]</span></span>
+          <span class="brand-tag">QA Engineer</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#qa-expertise" class="nav-link">QA Expertise</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Navigation Actions -->
+      <div class="nav-actions">
+        <!-- Dark / Light Mode Toggle Button -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         1. Hero Section
+         ====================================================================== -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Introduction & CTA -->
+          <div class="hero-content reveal-on-scroll">
+            <div class="hero-status-pill">
+              <span class="status-dot"></span>
+              <span>Available for QA / SDET Opportunities</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text"><span class="ph">[Your Name]</span></span>
+              <br>Software Quality Assurance Engineer
+            </h1>
+
+            <p class="hero-description">
+              Dedicated to ensuring software reliability, performance, and seamless user experiences. Specializing in <strong>Automated Test Frameworks</strong>, <strong>API Verification</strong>, <strong>Continuous Testing (CI/CD)</strong>, and rigorous <strong>Manual Exploratory Testing</strong>.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                View Projects
+              </a>
+              <a href="#resume" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Resume
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                Get In Touch
+              </a>
+            </div>
+
+            <!-- Quick Metrics / Stats -->
+            <div class="hero-stats-row">
+              <div class="hero-stat-item">
+                <span class="stat-value"><span class="ph">[X+]</span></span>
+                <span class="stat-label">Years of Experience</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="stat-value"><span class="ph">[X00+]</span></span>
+                <span class="stat-label">Automated Tests Written</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="stat-value"><span class="ph">[99.8%]</span></span>
+                <span class="stat-label">Regression Pass Rate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive QA Test Runner Simulation -->
+          <div class="hero-visual reveal-on-scroll">
+            <div class="hero-visual-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <div class="terminal-dot dot-red"></div>
+                  <div class="terminal-dot dot-yellow"></div>
+                  <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-title">qa-test-runner &mdash; bash</div>
+                <span class="badge badge-success">Passed</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line">
+                  <span class="t-prompt">$</span>
+                  <span class="t-cmd">npm run test:e2e -- --suite=regression</span>
+                </div>
+                <div class="terminal-line t-dim">
+                  <span>&gt; Running Playwright test suite against Staging...</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="t-pass">✓</span>
+                  <span>Authentication &amp; RBAC Validation <span class="t-dim">(14 tests, 280ms)</span></span>
+                </div>
+                <div class="terminal-line">
+                  <span class="t-pass">✓</span>
+                  <span>REST API Contract &amp; Schema Checks <span class="t-dim">(32 tests, 410ms)</span></span>
+                </div>
+                <div class="terminal-line">
+                  <span class="t-pass">✓</span>
+                  <span>E-Commerce Checkout &amp; Payment Gateway <span class="t-dim">(18 tests, 1.2s)</span></span>
+                </div>
+                <div class="terminal-line">
+                  <span class="t-pass">✓</span>
+                  <span>Cross-Browser Compatibility (Chromium, Firefox, WebKit)</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="t-pass">✓</span>
+                  <span>Performance Benchmarking (p95 &lt; 250ms)</span>
+                </div>
+                <div class="terminal-footer-metrics">
+                  <span><strong>Total:</strong> <span class="t-stat">128 passed</span>, 0 failed</span>
+                  <span class="badge badge-primary">Time: 4.82s</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. About Me Section
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Profile Overview</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            A software quality assurance professional committed to building robust defect-prevention workflows and reliable test architectures.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Main Bio -->
+          <div class="about-text reveal-on-scroll">
+            <p>
+              I am a <strong>Software Quality Assurance Engineer</strong> with <span class="ph">[X]</span> years of experience in verifying and validating web, mobile, and API systems. My core objective is to shift testing left—identifying edge cases and potential bugs early in the software development lifecycle rather than catching them after deployment.
+            </p>
+            <p>
+              My expertise spans the entire Software Testing Life Cycle (STLC), from requirements analysis, test strategy definition, and test case authoring, to building scalable automated regression suites using tools such as <span class="ph">[Playwright / Selenium / Cypress / Postman]</span>.
+            </p>
+            <p>
+              I advocate for quality as a team-wide responsibility, collaborating closely with software developers, product managers, and DevOps teams to establish dependable CI/CD quality gates.
+            </p>
+
+            <!-- 4 QA Core Pillars -->
+            <div class="about-pillars">
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h4 class="pillar-title">Shift-Left Testing</h4>
+                <p class="pillar-desc">Early defect discovery in the design and planning phases to minimize engineering rework.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <h4 class="pillar-title">Test Automation</h4>
+                <p class="pillar-desc">Scalable, maintainable Page Object Model (POM) and modular test frameworks.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h4 class="pillar-title">Performance &amp; APIs</h4>
+                <p class="pillar-desc">Comprehensive endpoint validation, load testing, and response time benchmarking.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                </div>
+                <h4 class="pillar-title">Exploratory Testing</h4>
+                <p class="pillar-desc">Creative, edge-case probing to uncover critical defects automated suites cannot predict.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar: Education & Certifications -->
+          <div class="about-sidebar reveal-on-scroll">
+            <!-- Certifications Card -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                <h3>Certifications</h3>
+              </div>
+              <div class="cert-list">
+                <div class="cert-item">
+                  <span class="cert-bullet">✓</span>
+                  <div>
+                    <div class="cert-name"><span class="ph">[ISTQB Certified Tester Foundation Level (CTFL)]</span></div>
+                    <div class="cert-issuer"><span class="ph">[ISTQB / Certification Body]</span> &bull; <span class="ph">[Year]</span></div>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <span class="cert-bullet">✓</span>
+                  <div>
+                    <div class="cert-name"><span class="ph">[Postman API Fundamentals Student / Pro Expert]</span></div>
+                    <div class="cert-issuer"><span class="ph">[Postman Academy]</span> &bull; <span class="ph">[Year]</span></div>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <span class="cert-bullet">✓</span>
+                  <div>
+                    <div class="cert-name"><span class="ph">[Test Automation University Certification]</span></div>
+                    <div class="cert-issuer"><span class="ph">[Applitools TAU]</span> &bull; <span class="ph">[Year]</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Card -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                <h3>Education</h3>
+              </div>
+              <div class="edu-list">
+                <div class="edu-item">
+                  <div>
+                    <div class="edu-degree"><span class="ph">[Bachelor of Science in Computer Science / Software Engineering]</span></div>
+                    <div class="edu-school"><span class="ph">[University / Institution Name]</span> &bull; <span class="ph">[Graduation Year]</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. Skills Section
+         ====================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Skills &amp; Toolset</h2>
+          <p class="section-subtitle">
+            A comprehensive inventory of frameworks, testing tools, methodologies, and technologies I leverage to maintain high software quality standards.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Test Automation -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3 class="skill-category-title">Test Automation &amp; Frameworks</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">Playwright</span>
+              <span class="skill-tag">Selenium WebDriver</span>
+              <span class="skill-tag">Cypress</span>
+              <span class="skill-tag">Appium (Mobile)</span>
+              <span class="skill-tag">PyTest</span>
+              <span class="skill-tag">JUnit / TestNG</span>
+              <span class="skill-tag">Cucumber (BDD)</span>
+              <span class="skill-tag">Page Object Model (POM)</span>
+            </div>
+          </div>
+
+          <!-- Category 2: API & Performance -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h3 class="skill-category-title">API &amp; Performance Testing</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">REST Assured</span>
+              <span class="skill-tag">Apache JMeter</span>
+              <span class="skill-tag">k6</span>
+              <span class="skill-tag">Swagger / OpenAPI</span>
+              <span class="skill-tag">Charles Proxy</span>
+              <span class="skill-tag">Newman CLI</span>
+              <span class="skill-tag">JSON Schema Validation</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Testing Types & Methodologies -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <h3 class="skill-category-title">Testing Types &amp; Methodologies</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">Functional Testing</span>
+              <span class="skill-tag">Regression Testing</span>
+              <span class="skill-tag">Smoke &amp; Sanity Testing</span>
+              <span class="skill-tag">Exploratory Testing</span>
+              <span class="skill-tag">Boundary Value Analysis (BVA)</span>
+              <span class="skill-tag">Equivalence Partitioning</span>
+              <span class="skill-tag">End-to-End (E2E)</span>
+              <span class="skill-tag">UAT &amp; Cross-Browser</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Test Management & Bug Tracking -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <h3 class="skill-category-title">Test Management &amp; Tracking</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">Jira</span>
+              <span class="skill-tag">TestRail</span>
+              <span class="skill-tag">Xray for Jira</span>
+              <span class="skill-tag">Zephyr</span>
+              <span class="skill-tag">Confluence</span>
+              <span class="skill-tag">Bugzilla</span>
+              <span class="skill-tag">Test Plan Authoring</span>
+              <span class="skill-tag">Traceability Matrix (RTM)</span>
+            </div>
+          </div>
+
+          <!-- Category 5: CI/CD & DevOps Quality Gates -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h3 class="skill-category-title">CI/CD &amp; DevOps Quality Gates</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">Jenkins</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">GitLab CI</span>
+              <span class="skill-tag">Allure Reports</span>
+              <span class="skill-tag">Sauce Labs / BrowserStack</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Languages & Databases -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3 class="skill-category-title">Languages &amp; Data Querying</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-tag">JavaScript / TypeScript</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">SQL (PostgreSQL / MySQL)</span>
+              <span class="skill-tag">JSON / XML</span>
+              <span class="skill-tag">HTML5 / CSS3</span>
+              <span class="skill-tag">Bash / Shell Scripting</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. Experience Section
+         ====================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Career History</span>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">
+            Demonstrated track record of implementing test automation, executing test plans, and managing quality across agile delivery cycles.
+          </p>
+        </div>
+
+        <div class="timeline">
+          
+          <!-- Experience Item 1: Senior QA Engineer -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role"><span class="ph">[Senior QA Engineer / Lead QA]</span></h3>
+                  <div class="timeline-company">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    <span><span class="ph">[Company Name]</span> &bull; <span class="ph">[City, State / Remote]</span></span>
+                  </div>
+                </div>
+                <span class="timeline-period"><span class="ph">[Month Year - Present]</span></span>
+              </div>
+
+              <div class="timeline-bullets">
+                <div class="timeline-bullet">
+                  Architected and maintained an end-to-end automated testing framework using <span class="ph">[Playwright / TypeScript]</span>, reducing manual regression testing cycle times by <span class="ph">[X0%]</span>.
+                </div>
+                <div class="timeline-bullet">
+                  Integrated automated smoke and regression suites into <span class="ph">[GitHub Actions / Jenkins]</span> CI/CD pipelines, establishing mandatory quality gates before production deployments.
+                </div>
+                <div class="timeline-bullet">
+                  Spearheaded API test coverage using <span class="ph">[Postman / REST Assured]</span>, validating payload schemas, boundary conditions, and token authorization across <span class="ph">[X0+]</span> microservice endpoints.
+                </div>
+                <div class="timeline-bullet">
+                  Collaborated in Agile/Scrum ceremonies, reviewing user stories and acceptance criteria (Gherkin/BDD) to prevent requirement ambiguity before sprint kickoffs.
+                </div>
+              </div>
+
+              <div class="timeline-skills">
+                <span class="badge">Playwright</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">CI/CD Gates</span>
+                <span class="badge">API Testing</span>
+                <span class="badge">Jira</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 2: QA Engineer -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role"><span class="ph">[QA Engineer / Software Tester]</span></h3>
+                  <div class="timeline-company">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    <span><span class="ph">[Company Name]</span> &bull; <span class="ph">[City, State / Remote]</span></span>
+                  </div>
+                </div>
+                <span class="timeline-period"><span class="ph">[Month Year - Month Year]</span></span>
+              </div>
+
+              <div class="timeline-bullets">
+                <div class="timeline-bullet">
+                  Authored and executed comprehensive test suites, covering functional, sanity, regression, and cross-browser testing across Chrome, Safari, Edge, and Firefox.
+                </div>
+                <div class="timeline-bullet">
+                  Logged, tracked, and verified <span class="ph">[X00+]</span> defects in Jira, providing clear step-by-step reproduction instructions, logs, network traces, and severity assessments.
+                </div>
+                <div class="timeline-bullet">
+                  Performed SQL database validation to verify data integrity, backend transaction accuracy, and record state transitions.
+                </div>
+                <div class="timeline-bullet">
+                  Conducted performance load tests using <span class="ph">[Apache JMeter / k6]</span> to identify system bottlenecks under peak simulated user traffic.
+                </div>
+              </div>
+
+              <div class="timeline-skills">
+                <span class="badge">Selenium</span>
+                <span class="badge">Postman</span>
+                <span class="badge">SQL Verification</span>
+                <span class="badge">JMeter</span>
+                <span class="badge">TestRail</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 3: Associate / Junior QA Engineer -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role"><span class="ph">[Associate QA Engineer / QA Intern]</span></h3>
+                  <div class="timeline-company">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    <span><span class="ph">[Company Name]</span> &bull; <span class="ph">[City, State / Remote]</span></span>
+                  </div>
+                </div>
+                <span class="timeline-period"><span class="ph">[Month Year - Month Year]</span></span>
+              </div>
+
+              <div class="timeline-bullets">
+                <div class="timeline-bullet">
+                  Developed detailed test cases and Requirements Traceability Matrices (RTM) from product specification documents.
+                </div>
+                <div class="timeline-bullet">
+                  Executed manual functional and regression testing across mobile (iOS/Android) and web interfaces.
+                </div>
+                <div class="timeline-bullet">
+                  Participated in daily bug triage meetings with engineering leads to prioritize critical defect resolutions.
+                </div>
+              </div>
+
+              <div class="timeline-skills">
+                <span class="badge">Manual Testing</span>
+                <span class="badge">Test Case Design</span>
+                <span class="badge">Bug Triage</span>
+                <span class="badge">Mobile QA</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. Projects Section
+         ====================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Case Studies &amp; Frameworks</span>
+          <h2 class="section-title">Featured QA Projects</h2>
+          <p class="section-subtitle">
+            A selection of automated test frameworks, API validation testbeds, and quality assurance case studies I have built.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters reveal-on-scroll">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="automation">Automation Frameworks</button>
+          <button class="filter-btn" data-filter="api">API Testing</button>
+          <button class="filter-btn" data-filter="performance">Performance &amp; Mobile</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: E2E Playwright Automation Framework -->
+          <div class="project-card reveal-on-scroll" data-category="automation">
+            <div class="project-meta-top">
+              <span class="project-type-badge">Automation Framework</span>
+              <span class="badge badge-success">CI/CD Ready</span>
+            </div>
+            <h3 class="project-title"><span class="ph">[E-Commerce E2E Test Automation Framework]</span></h3>
+            <p class="project-description">
+              A scalable Page Object Model (POM) end-to-end testing suite validating critical shopping cart workflows, user authentication, checkout transactions, and cross-browser resilience.
+            </p>
+            
+            <div class="project-qa-highlights">
+              <div class="qa-highlight-item">
+                <span class="qa-highlight-label">Strategy:</span>
+                <span>Data-driven POM with parallel test execution.</span>
+              </div>
+              <div class="qa-highlight-item">
+                <span class="qa-highlight-label">Outcome:</span>
+                <span><span class="ph">[X00+]</span> automated tests running in under 5 minutes on CI.</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="badge">Playwright</span>
+              <span class="badge">TypeScript</span>
+              <span class="badge">GitHub Actions</span>
+              <span class="badge">Allure</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#" class="btn btn-secondary btn-sm" aria-label="View Project Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span class="ph">[GitHub Repo]</span>
+              </a>
+              <a href="#" class="btn btn-outline btn-sm" aria-label="View Live Test Report">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span class="ph">[Test Report]</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: REST API Test Automation & Schema Validator -->
+          <div class="project-card reveal-on-scroll" data-category="api">
+            <div class="project-meta-top">
+              <span class="project-type-badge">API Testing</span>
+              <span class="badge badge-primary">Contract Validation</span>
+            </div>
+            <h3 class="project-title"><span class="ph">[REST API Automation &amp; Schema Validation Suite]</span></h3>
+            <p class="project-description">
+              A comprehensive API testing framework verifying CRUD endpoints, JWT token authentication flows, status codes, payload structures, and JSON schema boundaries.
+            </p>
+            
+            <div class="project-qa-highlights">
+              <div class="qa-highlight-item">
+                <span class="qa-highlight-label">Strategy:</span>
+                <span>Automated regression collection with Newman CLI in CI.</span>
+              </div>
+              <div class="qa-highlight-item">
+                <span class="qa-highlight-label">Outcome:</span>
+                <span>100% schema accuracy and regression safety on staging APIs.</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="badge">Postman</span>
+              <span class="badge">Newman</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">JSON Schema</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#" class="btn btn-secondary btn-sm" aria-label="View API Project Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span class="ph">[GitHub Repo]</span>
+              </a>
+              <a href="#" class="btn btn-outline btn-sm" aria-label="View API Docs">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span class="ph">[Postman Docs]</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Performance & Load Testing Suite -->
+          <div class="project-card reveal-on-scroll" data-category="performance">
+            <div class="project-meta-top">
+              <span class="project-type-badge">Performance Testing</span>
+              <span class="badge badge-warning">Load &amp; Stress</span>
+            </div>
+            <h3 class="project-title"><span class="ph">[High-Concurrency Performance &amp; Load Suite]</span></h3>
+            <p class="project-description">
+              Benchmarked microservices under peak traffic loads (up to 5,000 virtual concurrent users) to evaluate latency degradation, memory leaks, and failure recovery.
+            </p>
+            
+            <div class="project-qa-highlights">
+              <div class="qa-highlight-item">
+                <span class="qa-highlight-label">Strategy:</span>
+                <span>Step-load ramping, soak testing, and bottleneck analysis.</span>
+              </div>
+              <div class="qa-highlight-item">
+                <span class="qa-highlight-label">Outcome:</span>
+                <span>Identified database query deadlocks prior to release.</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="badge">Apache JMeter</span>
+              <span class="badge">k6</span>
+              <span class="badge">Grafana</span>
+              <span class="badge">InfluxDB</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#" class="btn btn-secondary btn-sm" aria-label="View Performance Repo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span class="ph">[GitHub Repo]</span>
+              </a>
+              <a href="#" class="btn btn-outline btn-sm" aria-label="View Performance Dashboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span class="ph">[Metrics Dashboard]</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: Cross-Platform Mobile Test Suite -->
+          <div class="project-card reveal-on-scroll" data-category="automation performance">
+            <div class="project-meta-top">
+              <span class="project-type-badge">Mobile QA</span>
+              <span class="badge badge-success">iOS &amp; Android</span>
+            </div>
+            <h3 class="project-title"><span class="ph">[Cross-Platform Mobile App Automation]</span></h3>
+            <p class="project-description">
+              Automated UI validation for native and hybrid mobile applications across Android and iOS real devices and cloud emulators.
+            </p>
+            
+            <div class="project-qa-highlights">
+              <div class="qa-highlight-item">
+                <span class="qa-highlight-label">Strategy:</span>
+                <span>Appium with Python PyTest &amp; cloud device farm integration.</span>
+              </div>
+              <div class="qa-highlight-item">
+                <span class="qa-highlight-label">Outcome:</span>
+                <span>Reduced regression test turnaround from 2 days to 35 minutes.</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="badge">Appium</span>
+              <span class="badge">Python</span>
+              <span class="badge">PyTest</span>
+              <span class="badge">BrowserStack</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#" class="btn btn-secondary btn-sm" aria-label="View Mobile Repo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span class="ph">[GitHub Repo]</span>
+              </a>
+              <a href="#" class="btn btn-outline btn-sm" aria-label="View Demo Video">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span class="ph">[Test Execution Run]</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. QA Testing Expertise Section
+         ====================================================================== -->
+    <section class="section" id="qa-expertise">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Methodology &amp; Standards</span>
+          <h2 class="section-title">QA Testing Expertise</h2>
+          <p class="section-subtitle">
+            A structured breakdown of my end-to-end testing processes, artifacts, defect triage workflows, and continuous quality governance.
+          </p>
+        </div>
+
+        <div class="qa-pillars-grid">
+          
+          <!-- Pillar 1: Test Strategy & Planning -->
+          <div class="qa-pillar-item reveal-on-scroll">
+            <div class="qa-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="qa-pillar-heading">Test Strategy &amp; Planning</h3>
+            <p class="qa-pillar-body">
+              Developing actionable Test Plans, scope definitions, test environment specifications, and Requirements Traceability Matrices (RTM) aligned with release milestones.
+            </p>
+            <div class="qa-artifacts-list">
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Master Test Plans</span>
+              </div>
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>RTM &amp; Risk-Based Scenarios</span>
+              </div>
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Entry &amp; Exit Criteria Definition</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Defect Lifecycle Management -->
+          <div class="qa-pillar-item reveal-on-scroll">
+            <div class="qa-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="qa-pillar-heading">Defect Lifecycle Management</h3>
+            <p class="qa-pillar-body">
+              Accurate Severity vs Priority classification, reproducible bug reports with network logs and DOM captures, and conducting proactive root cause analysis (RCA).
+            </p>
+            <div class="qa-artifacts-list">
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Clear Reproduction Steps</span>
+              </div>
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Severity vs Priority Triage</span>
+              </div>
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Root Cause Analysis (RCA)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Continuous Testing & CI/CD Gates -->
+          <div class="qa-pillar-item reveal-on-scroll">
+            <div class="qa-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+            </div>
+            <h3 class="qa-pillar-heading">CI/CD &amp; Continuous Testing</h3>
+            <p class="qa-pillar-body">
+              Embedding automated test suites directly into deployment pipelines. Preventing regression leakage with PR smoke gates and automated daily staging runs.
+            </p>
+            <div class="qa-artifacts-list">
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Automated PR Smoke Checks</span>
+              </div>
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Nightly Regression Runs</span>
+              </div>
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Instant Test Result Notifications</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Non-Functional & Accessibility Testing -->
+          <div class="qa-pillar-item reveal-on-scroll">
+            <div class="qa-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            </div>
+            <h3 class="qa-pillar-heading">Non-Functional &amp; Compliance</h3>
+            <p class="qa-pillar-body">
+              Evaluating web accessibility (WCAG 2.1 AA), cross-browser responsiveness, client-side load performance, and foundational security vulnerability scans.
+            </p>
+            <div class="qa-artifacts-list">
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>WCAG 2.1 Accessibility Checks</span>
+              </div>
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Lighthouse Performance Audits</span>
+              </div>
+              <div class="qa-artifact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Responsive Viewport Audits</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. Resume Section
+         ====================================================================== -->
+    <section class="section" id="resume">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Curriculum Vitae</span>
+          <h2 class="section-title">Resume</h2>
+          <p class="section-subtitle">
+            Download my complete curriculum vitae or view a summary of qualifications, certifications, and technical proficiencies.
+          </p>
+        </div>
+
+        <div class="resume-container reveal-on-scroll">
+          <div class="resume-card">
+            
+            <div class="resume-icon-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+
+            <h3 class="resume-title"><span class="ph">[Your Name]</span> &mdash; QA Engineer Resume</h3>
+            <p class="resume-summary-text">
+              Updated for <span class="ph">[Current Year]</span>. Features detailed breakdowns of test automation frameworks, API testing suites, employment history, and QA tooling.
+            </p>
+
+            <div class="resume-highlights-grid">
+              <div>
+                <div class="resume-highlight-title">Core Competency</div>
+                <div class="resume-highlight-desc">Manual &amp; Automated Testing, POM Frameworks, CI/CD Gates</div>
+              </div>
+              <div>
+                <div class="resume-highlight-title">Top Tools</div>
+                <div class="resume-highlight-desc">Playwright, Selenium, Postman, JMeter, Jira, GitHub Actions</div>
+              </div>
+              <div>
+                <div class="resume-highlight-title">Certifications</div>
+                <div class="resume-highlight-desc"><span class="ph">[ISTQB CTFL]</span>, <span class="ph">[Postman Certified]</span></div>
+              </div>
+            </div>
+
+            <div class="resume-action-buttons">
+              <!-- Placeholder: Link to actual PDF file when added -->
+              <a href="#" class="btn btn-primary" onclick="alert('Placeholder: Replace href with the path to your actual resume PDF (e.g. assets/resume.pdf)'); return false;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span class="ph">[Download Resume (PDF)]</span>
+              </a>
+              <a href="#experience" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                View Experience History
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. Contact Section
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="section-subtitle">
+            Interested in discussing a QA opportunity, test automation initiative, or consulting project? Send a message or connect via social platforms.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info Cards -->
+          <div class="contact-info-cards reveal-on-scroll">
+            
+            <!-- Email -->
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-label">Email</div>
+                <div class="contact-val"><span class="ph">[your.email@example.com]</span></div>
+              </div>
+              <button type="button" class="copy-btn" id="copy-email-btn" data-email="[your.email@example.com]" aria-label="Copy email address">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+              </button>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-val">
+                  <a href="#" class="footer-link"><span class="ph">[linkedin.com/in/yourprofile]</span></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-label">GitHub</div>
+                <div class="contact-val">
+                  <a href="#" class="footer-link"><span class="ph">[github.com/yourusername]</span></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-label">Location</div>
+                <div class="contact-val"><span class="ph">[City, State / Country]</span> &bull; <span class="ph">[Open to Remote]</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card reveal-on-scroll">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name" class="form-label">Full Name *</label>
+                <input type="text" id="form-name" class="form-control" placeholder="e.g. Alex Johnson" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email Address *</label>
+                <input type="email" id="form-email" class="form-control" placeholder="e.g. alex@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject *</label>
+                <input type="text" id="form-subject" class="form-control" placeholder="e.g. QA Engineer Opportunity / Project Inquiry" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message *</label>
+                <textarea id="form-message" class="form-control" placeholder="Hi, I'd like to discuss a QA opportunity with our team..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Message
+              </button>
+
+              <div id="form-status-msg" class="form-status-msg" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon">QA</div>
+            <span class="brand-name"><span class="ph">[Your Name]</span></span>
+          </div>
+          <p>
+            Software Quality Assurance Engineer focused on test automation, API reliability, performance profiling, and continuous quality delivery.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <div class="footer-links">
+            <a href="#hero" class="footer-link">Hero</a>
+            <a href="#about" class="footer-link">About Me</a>
+            <a href="#skills" class="footer-link">Skills &amp; Tools</a>
+            <a href="#experience" class="footer-link">Experience</a>
+            <a href="#projects" class="footer-link">Projects</a>
+            <a href="#qa-expertise" class="footer-link">QA Expertise</a>
+            <a href="#resume" class="footer-link">Resume</a>
+            <a href="#contact" class="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <!-- Connect & Resources -->
+        <div>
+          <div class="footer-heading">Connect</div>
+          <div class="footer-links">
+            <a href="#" class="footer-link"><span class="ph">[LinkedIn Profile]</span></a>
+            <a href="#" class="footer-link"><span class="ph">[GitHub Profile]</span></a>
+            <a href="#resume" class="footer-link"><span class="ph">[Download Resume]</span></a>
+            <a href="#contact" class="footer-link">Send a Message</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> <span class="ph">[Your Name]</span>. All rights reserved.
+        </div>
+        <div>
+          Built with semantic HTML5, CSS3, &amp; Vanilla JavaScript.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Core JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
