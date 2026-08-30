@@ -266,23 +266,6 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
-    id: "pronounce-spell-checker",
-    name: "Pronounce and Spell Checker AI",
-    category: "Language & Translation",
-    platform: "iOS",
-    role: "SQA Engineer (AI Speech & Privacy QA)",
-    description:
-      "An AI-powered language assistant offering smart spell-checking, phonetic breakdowns, accent training (US, UK, AUS), camera-based OCR text extraction, live voice translation, and interactive flashcards.",
-    testingFocus: [
-      "Validated core speech recognition (STT) and text-to-speech (TTS) playback quality, ensuring accurate pronunciation rendering and latency across diverse accents.",
-      "Executed end-to-end testing for OCR camera scanning, offline/online dictionary queries, and live two-way voice translation APIs using Postman.",
-      "Performed compatibility and compliance testing across iOS versions (including iOS 15+ retrofitting), validating App Tracking Transparency (ATT), GDPR consent flows, and in-app purchase subscriptions.",
-    ],
-    toolsUsed: ["Speech Recognition STT/TTS", "Postman APIs", "App Tracking Transparency (ATT)", "GDPR Consent", "JIRA", "GitLab"],
-    appStoreUrl: "https://apps.apple.com/us/app/pronounce-spell-checker-ai/id6739133471",
-    image: "/images/projects/pronounce-spell-checker.svg",
-  },
-  {
     id: "english-dictionary",
     name: "English Dictionary & Voice Translator",
     category: "Language & Translation",
@@ -298,7 +281,12 @@ export const projects: ProjectItem[] = [
     toolsUsed: ["iOS & Android", "SQLite Database", "TestFlight", "TTS / Audio Validation", "Postman"],
     appStoreUrl: "https://apps.apple.com/us/app/english-dictionary/id1214637073",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.advanced.englishdictionary.voicetranslator&hl=en",
-    image: "/images/projects/english-dictionary.svg",
+    image: "/images/projects/advanced-english-dictionary/screen-1.webp",
+    screenshots: [
+      "/images/projects/advanced-english-dictionary/screen-1.webp",
+      "/images/projects/advanced-english-dictionary/screen-2.webp",
+      "/images/projects/advanced-english-dictionary/screen-3.webp",
+    ],
   },
   {
     id: "speech-to-text-voice-notes",
@@ -316,7 +304,12 @@ export const projects: ProjectItem[] = [
     toolsUsed: ["Audio Testing", "Postman", "Android SDK", "iOS TestFlight", "JIRA"],
     appStoreUrl: "https://apps.apple.com/us/app/speech-to-text-voice-notes/id1458253978",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.ai.voicenotes.speechtotext.audiowriter&hl=en",
-    image: "/images/projects/speak-translate.svg",
+    image: "/images/projects/voice-notes/screen-1.webp",
+    screenshots: [
+      "/images/projects/voice-notes/screen-1.webp",
+      "/images/projects/voice-notes/screen-2.webp",
+      "/images/projects/voice-notes/screen-3.webp",
+    ],
   },
   {
     id: "personal-diary-with-lock",
@@ -334,7 +327,12 @@ export const projects: ProjectItem[] = [
     toolsUsed: ["Security Testing", "Biometric Validation", "SQLite Encryption", "IAP Audit", "JIRA"],
     appStoreUrl: "https://apps.apple.com/us/app/personal-diary-with-lock/id6504294747",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.personal.diary.mydiary.secret",
-    image: "/images/projects/compliance-web-app.svg",
+    image: "/images/projects/personal-diary/screen-1.webp",
+    screenshots: [
+      "/images/projects/personal-diary/screen-1.webp",
+      "/images/projects/personal-diary/screen-2.webp",
+      "/images/projects/personal-diary/screen-3.webp",
+    ],
   },
   {
     id: "english-urdu-voice-translator",
@@ -351,7 +349,12 @@ export const projects: ProjectItem[] = [
     toolsUsed: ["Localization Testing", "Nastaliq Rendering", "Postman", "Mobile QA"],
     appStoreUrl: "https://apps.apple.com/us/app/english-urdu-voice-translator/id1453315547",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.learn.englishinurdu.translatordictionary&hl=en",
-    image: "/images/projects/english-dictionary.svg",
+    image: "/images/projects/learn-english-in-urdu/screen-1.webp",
+    screenshots: [
+      "/images/projects/learn-english-in-urdu/screen-1.webp",
+      "/images/projects/learn-english-in-urdu/screen-2.webp",
+      "/images/projects/learn-english-in-urdu/screen-3.webp",
+    ],
   },
   {
     id: "blood-pressure-tracker",
@@ -367,7 +370,12 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["Data Accuracy Testing", "Boundary Analysis", "Android Real Devices", "JIRA"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bloodpressure.tracker.heart.rate&hl=en",
-    image: "/images/projects/ai-maths-solver.svg",
+    image: "/images/projects/bp-tracker/screen-1.webp",
+    screenshots: [
+      "/images/projects/bp-tracker/screen-1.webp",
+      "/images/projects/bp-tracker/screen-2.webp",
+      "/images/projects/bp-tracker/screen-3.webp",
+    ],
   },
   {
     id: "weight-loss-calorie-tracker",
@@ -383,7 +391,12 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["Formula Validation", "Unit Conversion Testing", "SQLite", "GitLab"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.weightloss.smartcalorie.tracker&hl=en",
-    image: "/images/projects/ai-voice-keyboard.svg",
+    image: "/images/projects/calorie-calculator/screen-1.webp",
+    screenshots: [
+      "/images/projects/calorie-calculator/screen-1.webp",
+      "/images/projects/calorie-calculator/screen-2.webp",
+      "/images/projects/calorie-calculator/screen-3.webp",
+    ],
   },
   {
     id: "write-sms-by-voice",
@@ -399,7 +412,12 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["Telephony Testing", "Speech Recognition", "Android Permissions", "JIRA"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.voicesms.message.voicetyping.keyboard&hl=en",
-    image: "/images/projects/speak-translate.svg",
+    image: "/images/projects/write-sms-by-voice/screen-1.webp",
+    screenshots: [
+      "/images/projects/write-sms-by-voice/screen-1.webp",
+      "/images/projects/write-sms-by-voice/screen-2.webp",
+      "/images/projects/write-sms-by-voice/screen-3.webp",
+    ],
   },
   {
     id: "speech-to-text-converter",
@@ -415,7 +433,12 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["Audio Stream QA", "Intent Testing", "Android OS Fragmentation"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.speechtotext.converter.app&hl=en",
-    image: "/images/projects/ai-voice-keyboard.svg",
+    image: "/images/projects/speech-to-text-converter/screen-1.webp",
+    screenshots: [
+      "/images/projects/speech-to-text-converter/screen-1.webp",
+      "/images/projects/speech-to-text-converter/screen-2.webp",
+      "/images/projects/speech-to-text-converter/screen-3.webp",
+    ],
   },
   {
     id: "all-languages-voice-keyboard",
@@ -431,7 +454,12 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["IME Testing", "RTL Localization", "Memory Profiling", "JIRA"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.all.languages.voicetyping.keyboard&hl=en",
-    image: "/images/projects/ai-voice-keyboard.svg",
+    image: "/images/projects/all-languages-voice-keyboard/screen-1.webp",
+    screenshots: [
+      "/images/projects/all-languages-voice-keyboard/screen-1.webp",
+      "/images/projects/all-languages-voice-keyboard/screen-2.webp",
+      "/images/projects/all-languages-voice-keyboard/screen-3.webp",
+    ],
   },
   {
     id: "calcbook-notepad-calculator",
@@ -447,7 +475,12 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["Parser Validation", "Boundary Value Analysis", "Regression Testing"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.smart.notepad.calculator&hl=en",
-    image: "/images/projects/ai-maths-solver.svg",
+    image: "/images/projects/calcbook/screen-1.webp",
+    screenshots: [
+      "/images/projects/calcbook/screen-1.webp",
+      "/images/projects/calcbook/screen-2.webp",
+      "/images/projects/calcbook/screen-3.webp",
+    ],
   },
   {
     id: "duplicate-contacts-remover",
@@ -463,7 +496,12 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["ContactProvider QA", "VCF Format Testing", "Data Safety Verification"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.duplicatecontacts.remover.backup.recovery&hl=en",
-    image: "/images/projects/compliance-web-app.svg",
+    image: "/images/projects/duplicate-contact-remover/screen-1.webp",
+    screenshots: [
+      "/images/projects/duplicate-contact-remover/screen-1.webp",
+      "/images/projects/duplicate-contact-remover/screen-2.webp",
+      "/images/projects/duplicate-contact-remover/screen-3.webp",
+    ],
   },
   {
     id: "numbers-to-words-converter",
@@ -479,7 +517,12 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["Boundary Testing", "Number System Algorithms", "Android Devices"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.numberstowords.converter&hl=en",
-    image: "/images/projects/ai-maths-solver.svg",
+    image: "/images/projects/numbers-to-words/screen-1.webp",
+    screenshots: [
+      "/images/projects/numbers-to-words/screen-1.webp",
+      "/images/projects/numbers-to-words/screen-2.webp",
+      "/images/projects/numbers-to-words/screen-3.webp",
+    ],
   },
   {
     id: "true-mirror-makeup-zoom",
@@ -495,7 +538,29 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["Camera2 API Testing", "Hardware Sensor QA", "UI Responsiveness"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.truemirror.makeup.zoom.camera&hl=en",
-    image: "/images/projects/compliance-web-app.svg",
+    image: "/images/projects/true-mirror/screen-1.jpg",
+    screenshots: [
+      "/images/projects/true-mirror/screen-1.jpg",
+      "/images/projects/true-mirror/screen-2.jpg",
+      "/images/projects/true-mirror/screen-3.jpg",
+    ],
+  },
+  {
+    id: "pronounce-spell-checker",
+    name: "Pronounce and Spell Checker AI",
+    category: "Language & Translation",
+    platform: "iOS",
+    role: "SQA Engineer (AI Speech & Privacy QA)",
+    description:
+      "An AI-powered language assistant offering smart spell-checking, phonetic breakdowns, accent training (US, UK, AUS), camera-based OCR text extraction, live voice translation, and interactive flashcards.",
+    testingFocus: [
+      "Validated core speech recognition (STT) and text-to-speech (TTS) playback quality, ensuring accurate pronunciation rendering and latency across diverse accents.",
+      "Executed end-to-end testing for OCR camera scanning, offline/online dictionary queries, and live two-way voice translation APIs using Postman.",
+      "Performed compatibility and compliance testing across iOS versions (including iOS 15+ retrofitting), validating App Tracking Transparency (ATT), GDPR consent flows, and in-app purchase subscriptions.",
+    ],
+    toolsUsed: ["Speech Recognition STT/TTS", "Postman APIs", "App Tracking Transparency (ATT)", "GDPR Consent", "JIRA", "GitLab"],
+    appStoreUrl: "https://apps.apple.com/us/app/pronounce-spell-checker-ai/id6739133471",
+    image: "/images/projects/pronounce-spell-checker.svg",
   },
 ];
 
