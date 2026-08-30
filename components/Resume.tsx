@@ -7,14 +7,14 @@ export default function Resume() {
     <section id="resume" className="py-20 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
-        <div className="glass-card rounded-2xl p-8 sm:p-10 relative overflow-hidden border border-teal-500/30 text-center space-y-6">
+        <div className="glass-card rounded-3xl p-8 sm:p-10 relative overflow-hidden border border-indigo-400/30 text-center space-y-6">
           
-          {/* Subtle Ambient Radial Lighting */}
-          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-40 bg-teal-500/15 rounded-full blur-3xl pointer-events-none" />
+          {/* Ambient Lighting */}
+          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-40 bg-indigo-500/18 rounded-full blur-3xl pointer-events-none" />
 
           {/* Icon Badge */}
-          <div className="w-14 h-14 mx-auto rounded-2xl bg-teal-950/80 border border-teal-500/40 flex items-center justify-center text-teal-300 shadow-[0_0_20px_rgba(45,212,191,0.2)]">
-            <FileText className="w-7 h-7 text-teal-300" />
+          <div className="w-14 h-14 mx-auto rounded-2xl bg-indigo-950/80 border border-indigo-400/40 flex items-center justify-center text-indigo-300 shadow-[0_0_20px_rgba(99,102,241,0.25)]">
+            <FileText className="w-7 h-7 text-indigo-300" />
           </div>
 
           {/* Header */}
@@ -23,34 +23,34 @@ export default function Resume() {
               Curriculum Vitae / Resume
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed">
-              Explore my technical proficiencies, testing history, and detailed qualifications as a Software Quality Assurance Engineer.
+              Explore my technical proficiencies, mobile QA testing history, and qualifications as a Software Quality Assurance Engineer &amp; Team Lead.
             </p>
           </div>
 
           {/* Quick Highlight Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto pt-2 pb-2 text-left">
-            <div className="p-3 rounded-lg bg-teal-950/40 border border-teal-500/20">
-              <div className="flex items-center gap-1.5 text-xs font-mono font-semibold text-teal-300">
+            <div className="p-3.5 rounded-xl bg-indigo-950/40 border border-indigo-400/20">
+              <div className="flex items-center gap-1.5 text-xs font-mono font-semibold text-indigo-300">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Mobile &amp; Web QA</span>
+                <span>15+ Mobile Apps</span>
               </div>
-              <p className="text-[11px] text-slate-400 mt-1">Android, iOS, Cross-browser</p>
+              <p className="text-[11px] text-slate-400 mt-1">iOS App Store &amp; Google Play</p>
             </div>
 
-            <div className="p-3 rounded-lg bg-teal-950/40 border border-teal-500/20">
-              <div className="flex items-center gap-1.5 text-xs font-mono font-semibold text-teal-300">
+            <div className="p-3.5 rounded-xl bg-indigo-950/40 border border-indigo-400/20">
+              <div className="flex items-center gap-1.5 text-xs font-mono font-semibold text-indigo-300">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
-                <span>API &amp; Postman</span>
+                <span>Antigravity &amp; APIs</span>
               </div>
-              <p className="text-[11px] text-slate-400 mt-1">Schema &amp; Payload Verification</p>
+              <p className="text-[11px] text-slate-400 mt-1">Automation &amp; Postman Suites</p>
             </div>
 
-            <div className="p-3 rounded-lg bg-teal-950/40 border border-teal-500/20">
-              <div className="flex items-center gap-1.5 text-xs font-mono font-semibold text-teal-300">
+            <div className="p-3.5 rounded-xl bg-indigo-950/40 border border-indigo-400/20">
+              <div className="flex items-center gap-1.5 text-xs font-mono font-semibold text-indigo-300">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Agile Tracking</span>
+                <span>QA Leadership</span>
               </div>
-              <p className="text-[11px] text-slate-400 mt-1">JIRA, GitLab, Defect Triage</p>
+              <p className="text-[11px] text-slate-400 mt-1">JIRA, GitLab, Sprint SQA Lead</p>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ export default function Resume() {
               href={personalData.resume.viewPath}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-bold text-[#081216] bg-gradient-to-r from-teal-400 to-emerald-400 hover:from-teal-300 hover:to-emerald-300 transition-all shadow-[0_0_20px_rgba(45,212,191,0.25)] transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-indigo-300 via-sky-200 to-purple-300 hover:from-indigo-200 hover:to-purple-200 transition-all shadow-[0_0_25px_rgba(99,102,241,0.3)] transform hover:-translate-y-0.5"
             >
               <ExternalLink className="w-4 h-4" />
               <span>View Resume</span>
@@ -69,9 +69,9 @@ export default function Resume() {
             <a
               href={personalData.resume.downloadPath}
               download={personalData.resume.fileName}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold text-teal-300 bg-teal-950/60 hover:bg-teal-900/60 border border-teal-500/30 hover:border-teal-400 transition-all backdrop-blur-md transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-indigo-200 bg-indigo-950/60 hover:bg-indigo-900/70 border border-indigo-400/30 hover:border-indigo-300 transition-all backdrop-blur-md transform hover:-translate-y-0.5"
             >
-              <Download className="w-4 h-4 text-teal-400" />
+              <Download className="w-4 h-4 text-indigo-300" />
               <span>Download Resume</span>
             </a>
           </div>

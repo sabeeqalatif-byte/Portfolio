@@ -10,26 +10,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#081216",
-        surface: "#0c1b20",
-        "surface-glass": "rgba(12, 27, 32, 0.65)",
-        card: "rgba(16, 34, 40, 0.55)",
-        "card-hover": "rgba(22, 46, 54, 0.75)",
-        border: "rgba(45, 212, 191, 0.15)",
-        "border-hover": "rgba(45, 212, 191, 0.35)",
-        "border-subtle": "rgba(20, 184, 166, 0.1)",
+        background: "#0a0f1d",
+        surface: "#0f172a",
+        "surface-glass": "rgba(15, 23, 42, 0.65)",
+        card: "rgba(19, 29, 51, 0.6)",
+        "card-hover": "rgba(28, 41, 71, 0.8)",
+        border: "rgba(129, 140, 248, 0.16)",
+        "border-hover": "rgba(129, 140, 248, 0.38)",
+        "border-subtle": "rgba(99, 102, 241, 0.12)",
         accent: {
-          DEFAULT: "#14b8a6", // Sea green / Teal 500
-          hover: "#0d9488",   // Teal 600
-          light: "#2dd4bf",   // Sea green light / Teal 400
-          bright: "#5eead4",  // Teal 300
-          glow: "rgba(45, 212, 191, 0.2)",
-          subtle: "rgba(20, 184, 166, 0.12)",
+          DEFAULT: "#6366f1", // Soft Indigo / Iris
+          hover: "#4f46e5",   // Deep Indigo
+          light: "#818cf8",   // Calming Lavender / Periwinkle
+          bright: "#a5b4fc",  // Soft Lilac
+          sky: "#38bdf8",     // Calming Sky Blue
+          cyan: "#22d3ee",    // Soft Cyan
+          glow: "rgba(99, 102, 241, 0.22)",
+          subtle: "rgba(99, 102, 241, 0.12)",
         },
         qa: {
-          emerald: "#10b981",
-          sea: "#2dd4bf",
-          subtle: "rgba(45, 212, 191, 0.1)",
+          emerald: "#34d399",
+          mint: "#6ee7b7",
+          subtle: "rgba(52, 211, 153, 0.12)",
         },
       },
       fontFamily: {
@@ -52,10 +54,8 @@ const config: Config = {
       },
       boxShadow: {
         glass: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
-        "glass-glow": "0 0 25px -3px rgba(45, 212, 191, 0.18)",
-      },
-      backdropBlur: {
-        xs: "2px",
+        "glass-glow": "0 0 30px -4px rgba(99, 102, 241, 0.25)",
+        "aurora-glow": "0 0 40px -6px rgba(56, 189, 248, 0.2)",
       },
     },
   },

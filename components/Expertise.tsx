@@ -6,13 +6,13 @@ export default function Expertise() {
   const getIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <Smartphone className="w-5 h-5 text-teal-400" />;
+        return <Smartphone className="w-5 h-5 text-indigo-300" />;
       case 1:
-        return <Globe className="w-5 h-5 text-teal-400" />;
+        return <Globe className="w-5 h-5 text-sky-300" />;
       case 2:
-        return <Terminal className="w-5 h-5 text-teal-400" />;
+        return <Terminal className="w-5 h-5 text-purple-300" />;
       default:
-        return <ShieldCheck className="w-5 h-5 text-teal-400" />;
+        return <ShieldCheck className="w-5 h-5 text-emerald-300" />;
     }
   };
 
@@ -22,14 +22,14 @@ export default function Expertise() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-teal-300 bg-teal-950/50 border border-teal-500/30">
-            <CheckSquare className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-indigo-200 bg-indigo-950/60 border border-indigo-400/30">
+            <CheckSquare className="w-3.5 h-3.5 text-indigo-300" />
             <span>Core Disciplines</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-100">
             QA Testing Expertise
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
             Specialized QA domains covering end-to-end verification, platform compatibility, API health, and testing lifecycle management.
           </p>
         </div>
@@ -39,11 +39,11 @@ export default function Expertise() {
           {expertiseAreas.map((area, idx) => (
             <div
               key={area.title}
-              className="glass-card rounded-xl p-6 flex flex-col justify-between space-y-4"
+              className="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-4"
             >
               <div className="space-y-3">
                 {/* Icon & Title */}
-                <div className="w-10 h-10 rounded-lg bg-teal-950/80 border border-teal-500/30 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-indigo-950/80 border border-indigo-400/30 flex items-center justify-center">
                   {getIcon(idx)}
                 </div>
                 
@@ -51,13 +51,13 @@ export default function Expertise() {
                   {area.title}
                 </h3>
 
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-xs text-slate-300 leading-relaxed">
                   {area.description}
                 </p>
               </div>
 
               {/* Items List */}
-              <div className="pt-3 border-t border-teal-500/15">
+              <div className="pt-3 border-t border-indigo-400/15">
                 <ul className="space-y-2 text-xs text-slate-300">
                   {area.items.map((item, itemIdx) => (
                     <li key={itemIdx} className="flex items-start gap-2">

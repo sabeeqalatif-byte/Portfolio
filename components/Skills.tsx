@@ -6,13 +6,13 @@ export default function Skills() {
   const getCategoryIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <CheckCircle className="w-4 h-4 text-teal-400" />;
+        return <CheckCircle className="w-4 h-4 text-indigo-300" />;
       case 1:
-        return <Database className="w-4 h-4 text-teal-400" />;
+        return <Database className="w-4 h-4 text-sky-300" />;
       case 2:
-        return <Terminal className="w-4 h-4 text-teal-400" />;
+        return <Terminal className="w-4 h-4 text-purple-300" />;
       default:
-        return <Wrench className="w-4 h-4 text-teal-400" />;
+        return <Wrench className="w-4 h-4 text-emerald-300" />;
     }
   };
 
@@ -22,14 +22,14 @@ export default function Skills() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-teal-300 bg-teal-950/50 border border-teal-500/30">
-            <Cpu className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-indigo-200 bg-indigo-950/60 border border-indigo-400/30">
+            <Cpu className="w-3.5 h-3.5 text-indigo-300" />
             <span>Technical Competencies</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-100">
             Skills &amp; Toolset
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
             Proficiencies across software testing methodologies, API verification, mobile automation, and defect tracking tools.
           </p>
         </div>
@@ -39,11 +39,11 @@ export default function Skills() {
           {skillCategories.map((category, idx) => (
             <div
               key={category.title}
-              className="glass-card rounded-xl p-6 space-y-4"
+              className="glass-card rounded-2xl p-6 sm:p-7 space-y-4"
             >
               {/* Category Header */}
-              <div className="flex items-center gap-3 pb-3 border-b border-teal-500/15">
-                <div className="w-8 h-8 rounded-lg bg-teal-950/70 border border-teal-500/30 flex items-center justify-center">
+              <div className="flex items-center gap-3 pb-3 border-b border-indigo-400/15">
+                <div className="w-9 h-9 rounded-xl bg-indigo-950/70 border border-indigo-400/30 flex items-center justify-center">
                   {getCategoryIcon(idx)}
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-100">
@@ -56,7 +56,7 @@ export default function Skills() {
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium text-slate-200 bg-teal-950/40 border border-teal-500/20 hover:border-teal-400/50 hover:text-teal-300 hover:bg-teal-900/40 transition-all duration-150 shadow-sm"
+                    className="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium text-slate-200 bg-indigo-950/40 border border-indigo-400/20 hover:border-indigo-400/50 hover:text-indigo-200 hover:bg-indigo-900/40 transition-all duration-150 shadow-sm"
                   >
                     {skill}
                   </span>

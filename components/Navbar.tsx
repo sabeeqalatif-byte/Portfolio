@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav shadow-lg shadow-black/30" : "bg-[#081216]/60 backdrop-blur-md"
+        scrolled ? "glass-nav shadow-lg shadow-black/40" : "bg-[#0a0f1d]/70 backdrop-blur-md"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
@@ -47,14 +47,14 @@ export default function Navbar() {
           className="flex items-center gap-3 group focus:outline-none"
           aria-label={`${personalData.name} - Home`}
         >
-          <div className="w-10 h-10 rounded-lg bg-teal-950/80 border border-teal-500/30 flex items-center justify-center text-accent-light group-hover:border-teal-400 group-hover:shadow-[0_0_15px_rgba(45,212,191,0.3)] transition-all">
-            <ShieldCheck className="w-5 h-5 text-accent-light" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600/30 to-purple-600/30 border border-indigo-400/30 flex items-center justify-center text-indigo-300 group-hover:border-indigo-300 group-hover:shadow-[0_0_18px_rgba(129,140,248,0.35)] transition-all">
+            <ShieldCheck className="w-5 h-5 text-indigo-300" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-slate-100 group-hover:text-accent-bright transition-colors text-base sm:text-lg leading-tight">
+            <span className="font-bold text-slate-100 group-hover:text-indigo-200 transition-colors text-base sm:text-lg leading-tight">
               {personalData.name}
             </span>
-            <span className="text-xs font-mono text-teal-400/80">QA Engineer</span>
+            <span className="text-xs font-mono text-indigo-300/80">SQA Team Lead</span>
           </div>
         </a>
 
@@ -66,15 +66,15 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-150 relative ${
+                className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150 relative ${
                   isActive
-                    ? "text-accent-bright font-semibold bg-teal-500/10 border border-teal-500/20"
-                    : "text-slate-300 hover:text-accent-light hover:bg-teal-950/40"
+                    ? "text-indigo-200 font-semibold bg-indigo-500/15 border border-indigo-400/30 shadow-[0_0_12px_rgba(99,102,241,0.15)]"
+                    : "text-slate-300 hover:text-indigo-200 hover:bg-slate-800/50"
                 }`}
               >
                 {item.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-accent-light rounded-full shadow-[0_0_8px_#2dd4bf]" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-indigo-400 rounded-full shadow-[0_0_8px_#818cf8]" />
                 )}
               </a>
             );
@@ -85,7 +85,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="#contact"
-            className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-accent-bright bg-teal-950/60 hover:bg-teal-900/60 border border-teal-500/30 hover:border-teal-400 rounded-lg transition-all shadow-[0_0_15px_rgba(20,184,166,0.1)] hover:shadow-[0_0_20px_rgba(45,212,191,0.25)]"
+            className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-indigo-200 bg-indigo-950/70 hover:bg-indigo-900/80 border border-indigo-400/30 hover:border-indigo-300 rounded-xl transition-all shadow-[0_0_15px_rgba(99,102,241,0.15)] hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]"
           >
             Get in Touch
           </a>
@@ -93,7 +93,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-accent-light bg-teal-950/50 border border-teal-500/20 hover:border-teal-500/40 focus:outline-none"
+            className="md:hidden p-2 rounded-xl text-slate-300 hover:text-indigo-200 bg-indigo-950/60 border border-indigo-400/25 hover:border-indigo-400/50 focus:outline-none"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -104,7 +104,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {isOpen && (
-        <div className="md:hidden glass-nav border-t border-teal-500/15 px-4 pt-3 pb-5 space-y-1 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="md:hidden glass-nav border-t border-indigo-400/15 px-4 pt-3 pb-5 space-y-1 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
           {navItems.map((item) => {
             const isActive = activeSection === item.href.substring(1);
             return (
@@ -114,8 +114,8 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
                   isActive
-                    ? "text-accent-bright bg-teal-500/15 border border-teal-500/30"
-                    : "text-slate-300 hover:text-accent-light hover:bg-teal-950/60"
+                    ? "text-indigo-200 bg-indigo-500/20 border border-indigo-400/30 font-semibold"
+                    : "text-slate-300 hover:text-indigo-200 hover:bg-slate-800/60"
                 }`}
               >
                 {item.label}
@@ -126,7 +126,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="block text-center w-full py-2.5 px-4 rounded-lg text-sm font-semibold text-[#081216] bg-gradient-to-r from-teal-400 to-emerald-400 hover:opacity-95 transition-opacity"
+              className="block text-center w-full py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-950 bg-gradient-to-r from-indigo-400 via-sky-300 to-purple-300 hover:opacity-95 transition-opacity shadow-lg"
             >
               Get in Touch
             </a>
