@@ -236,11 +236,11 @@ export const projects: ProjectItem[] = [
     toolsUsed: ["Postman", "GitLab", "iOS & Android Real Devices", "OCR Vision", "In-App Purchases (IAP)"],
     appStoreUrl: "https://apps.apple.com/us/app/ai-math-solver-scanner-app/id6774058690",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.aistudy.math.scan.problemsolver&hl=en",
-    image: "/images/projects/math-collage-1.webp",
+    image: "/images/projects/ai-maths-solver/math-collage-1.webp",
     screenshots: [
-      "/images/projects/math-collage-1.webp",
-      "/images/projects/math-collage-2.webp",
-      "/images/projects/math-collage-3.webp",
+      "/images/projects/ai-maths-solver/math-collage-1.webp",
+      "/images/projects/ai-maths-solver/math-collage-2.webp",
+      "/images/projects/ai-maths-solver/math-collage-3.webp",
     ],
   },
   {
@@ -258,7 +258,12 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["Antigravity Framework", "Postman", "JIRA", "GitLab", "Android SDK", "Audio & IME Testing"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.aivoice.keyboard.voicetyping&hl=en",
-    image: "/images/projects/ai-voice-keyboard.svg",
+    image: "/images/projects/ai-voice-keyboard/voice-1.jpg",
+    screenshots: [
+      "/images/projects/ai-voice-keyboard/voice-1.jpg",
+      "/images/projects/ai-voice-keyboard/voice-2.jpg",
+      "/images/projects/ai-voice-keyboard/voice-3.webp",
+    ],
   },
   {
     id: "pronounce-spell-checker",
