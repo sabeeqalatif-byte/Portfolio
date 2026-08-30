@@ -39,7 +39,7 @@ export default function Contact() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold theme-badge">
-            <Send className="w-3.5 h-3.5 text-[#ef98a7]" />
+            <Send className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
             <span>Connect</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-heading)]">
@@ -56,7 +56,7 @@ export default function Contact() {
           {/* Email Card with Copy Feature */}
           <div className="theme-card rounded-2xl p-5 flex items-center justify-between gap-4">
             <div className="flex items-center gap-3.5 overflow-hidden">
-              <div className="w-11 h-11 rounded-xl bg-[#ef98a7]/15 border border-[#ef98a7]/30 flex items-center justify-center text-[#ef98a7] flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-[#58795e]/15 border border-[#94ca9d]/30 flex items-center justify-center text-[#58795e] dark:text-[#bafdc5] flex-shrink-0">
                 <Mail className="w-5 h-5" />
               </div>
               <div className="overflow-hidden">
@@ -65,7 +65,7 @@ export default function Contact() {
                 </div>
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="text-sm font-bold text-[var(--text-heading)] hover:text-[#ef98a7] transition-colors truncate block"
+                  className="text-sm font-bold text-[var(--text-heading)] hover:text-[#58795e] dark:hover:text-[#bafdc5] transition-colors truncate block"
                 >
                   {contactInfo.email}
                 </a>
@@ -80,12 +80,12 @@ export default function Contact() {
             >
               {copiedEmail ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-[#ef98a7]" />
-                  <span className="text-[#ef98a7]">Copied</span>
+                  <Check className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
+                  <span className="text-[#58795e] dark:text-[#bafdc5]">Copied</span>
                 </>
               ) : (
                 <>
-                  <Copy className="w-3.5 h-3.5 text-[#ef98a7]" />
+                  <Copy className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
                   <span>Copy</span>
                 </>
               )}
@@ -95,8 +95,8 @@ export default function Contact() {
           {/* Phone Card with Copy Feature */}
           <div className="theme-card rounded-2xl p-5 flex items-center justify-between gap-4">
             <div className="flex items-center gap-3.5 overflow-hidden">
-              <div className="w-11 h-11 rounded-xl bg-[#f7bea9]/20 border border-[#f7bea9]/35 flex items-center justify-center text-[#f7bea9] flex-shrink-0">
-                <Phone className="w-5 h-5 text-[#ef98a7]" />
+              <div className="w-11 h-11 rounded-xl bg-[#bafdc5]/20 border border-[#94ca9d]/35 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] flex-shrink-0">
+                <Phone className="w-5 h-5 text-[#58795e] dark:text-[#bafdc5]" />
               </div>
               <div className="overflow-hidden">
                 <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
@@ -104,7 +104,7 @@ export default function Contact() {
                 </div>
                 <a
                   href={`tel:${contactInfo.phone}`}
-                  className="text-sm font-bold text-[var(--text-heading)] hover:text-[#ef98a7] transition-colors truncate block font-mono"
+                  className="text-sm font-bold text-[var(--text-heading)] hover:text-[#58795e] dark:hover:text-[#bafdc5] transition-colors truncate block font-mono"
                 >
                   {contactInfo.phone}
                 </a>
@@ -119,12 +119,12 @@ export default function Contact() {
             >
               {copiedPhone ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-[#ef98a7]" />
-                  <span className="text-[#ef98a7]">Copied</span>
+                  <Check className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
+                  <span className="text-[#58795e] dark:text-[#bafdc5]">Copied</span>
                 </>
               ) : (
                 <>
-                  <Copy className="w-3.5 h-3.5 text-[#ef98a7]" />
+                  <Copy className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
                   <span>Copy</span>
                 </>
               )}
@@ -138,14 +138,14 @@ export default function Contact() {
             rel="noopener noreferrer"
             className="theme-card rounded-2xl p-5 flex items-center gap-3.5 group transition-all"
           >
-            <div className="w-11 h-11 rounded-xl bg-[#807094]/15 border border-[#807094]/30 flex items-center justify-center text-[#807094] dark:text-[#f7bea9] group-hover:scale-105 transition-all flex-shrink-0">
+            <div className="w-11 h-11 rounded-xl bg-[#94ca9d]/20 border border-[#94ca9d]/35 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] group-hover:scale-105 transition-all flex-shrink-0">
               <Linkedin className="w-5 h-5" />
             </div>
             <div className="overflow-hidden">
               <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
                 LinkedIn
               </div>
-              <div className="text-sm font-bold text-[var(--text-heading)] group-hover:text-[#ef98a7] transition-colors truncate">
+              <div className="text-sm font-bold text-[var(--text-heading)] group-hover:text-[#58795e] dark:group-hover:text-[#bafdc5] transition-colors truncate">
                 linkedin.com/in/sabika-latif
               </div>
             </div>
@@ -153,13 +153,13 @@ export default function Contact() {
 
           {/* Location & Remote Availability Card */}
           <div className="theme-card rounded-2xl p-5 flex items-center gap-3.5">
-            <div className="w-11 h-11 rounded-xl bg-[#604f71]/15 border border-[#604f71]/30 flex items-center justify-center text-[#604f71] dark:text-[#f7bea9] flex-shrink-0">
+            <div className="w-11 h-11 rounded-xl bg-[#2c3c2f]/15 border border-[#94ca9d]/30 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] flex-shrink-0">
               <MapPin className="w-5 h-5" />
             </div>
             <div className="overflow-hidden">
               <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold flex items-center gap-1.5">
                 <span>Location</span>
-                <span className="text-[#ef98a7] dark:text-[#f7bea9] font-bold">• Open to Remote</span>
+                <span className="text-[#58795e] dark:text-[#bafdc5] font-bold">• Open to Remote</span>
               </div>
               <div className="text-sm font-bold text-[var(--text-heading)] truncate">
                 {contactInfo.location}

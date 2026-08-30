@@ -3,91 +3,103 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { projects, ProjectItem } from "@/data/portfolioData";
-import { FolderGit2, Smartphone, CheckCircle, ExternalLink, Apple, Play, ChevronLeft, ChevronRight, Eye } from "lucide-react";
+import { FolderGit2, Smartphone, CheckCircle, ExternalLink, Apple, Play, Layers } from "lucide-react";
 
 function ProjectCard({ project }: { project: ProjectItem }) {
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const images = project.screenshots && project.screenshots.length > 0 ? project.screenshots : (project.image ? [project.image] : []);
-  const currentImage = images[activeImageIndex] || project.image;
+  const [selectedImageIdx, setSelectedImageIdx] = useState(0);
+  const screenshots = project.screenshots && project.screenshots.length > 0 ? project.screenshots : (project.image ? [project.image] : []);
 
-  const nextImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setActiveImageIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setActiveImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  // For 3-device collage
+  const hasCollage = screenshots.length >= 3;
 
   return (
     <div className="theme-card rounded-2xl overflow-hidden flex flex-col justify-between group shadow-lg">
-      {/* Project Image / Multi-Screenshot Preview */}
-      <div className="relative w-full h-64 sm:h-72 bg-[#1c1426] border-b border-[var(--border-color)] overflow-hidden flex items-center justify-center">
-        {currentImage ? (
-          <div className="relative w-full h-full p-2 flex items-center justify-center">
-            <Image
-              src={currentImage}
-              alt={`${project.name} screenshot ${activeImageIndex + 1}`}
-              fill
-              className="object-contain object-center group-hover:scale-[1.02] transition-transform duration-300"
-            />
+      {/* Project Visual Showcase */}
+      <div className="relative w-full h-72 sm:h-80 bg-gradient-to-b from-[#1d2c22] to-[#121c15] border-b border-[var(--border-color)] overflow-hidden flex items-center justify-center p-4">
+        
+        {/* Ambient Glow */}
+        <div className="absolute inset-0 bg-radial-gradient from-[#bafdc5]/15 to-transparent pointer-events-none" />
+
+        {hasCollage ? (
+          /* Multi-Device 3D Perspective Collage */
+          <div className="relative w-full h-full flex items-center justify-center pt-2">
+            
+            {/* Left Screen (Tilted) */}
+            <button
+              type="button"
+              onClick={() => setSelectedImageIdx(1)}
+              className="absolute left-4 sm:left-8 w-28 sm:w-32 h-52 sm:h-56 rounded-2xl overflow-hidden shadow-2xl border border-[#94ca9d]/40 -rotate-6 -translate-y-1 scale-90 hover:scale-95 hover:z-30 hover:-rotate-3 transition-all duration-300 group-hover:-translate-x-2 focus:outline-none"
+              title="Click to view this screen"
+            >
+              <Image
+                src={screenshots[1] || screenshots[0]}
+                alt={`${project.name} left screen`}
+                fill
+                className="object-cover object-top"
+              />
+            </button>
+
+            {/* Right Screen (Tilted) */}
+            <button
+              type="button"
+              onClick={() => setSelectedImageIdx(2)}
+              className="absolute right-4 sm:right-8 w-28 sm:w-32 h-52 sm:h-56 rounded-2xl overflow-hidden shadow-2xl border border-[#94ca9d]/40 rotate-6 -translate-y-1 scale-90 hover:scale-95 hover:z-30 hover:rotate-3 transition-all duration-300 group-hover:translate-x-2 focus:outline-none"
+              title="Click to view this screen"
+            >
+              <Image
+                src={screenshots[2] || screenshots[0]}
+                alt={`${project.name} right screen`}
+                fill
+                className="object-cover object-top"
+              />
+            </button>
+
+            {/* Center Hero Screen (Elevated Focus) */}
+            <button
+              type="button"
+              onClick={() => setSelectedImageIdx(0)}
+              className="relative z-20 w-32 sm:w-36 h-60 sm:h-64 rounded-2xl overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.6)] border-2 border-[#bafdc5] ring-4 ring-[#bafdc5]/25 scale-100 hover:scale-105 transition-all duration-300 focus:outline-none"
+              title="Click to focus primary screen"
+            >
+              <Image
+                src={screenshots[selectedImageIdx]}
+                alt={`${project.name} center hero screen`}
+                fill
+                className="object-cover object-top"
+              />
+            </button>
+
+            {/* Collage Badge Indicator */}
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#152018]/90 border border-[#94ca9d]/40 text-[#bafdc5] text-[11px] font-mono font-bold backdrop-blur-md shadow-md">
+              <Layers className="w-3.5 h-3.5 text-[#bafdc5]" />
+              <span>Interactive 3-Screen Showcase</span>
+            </div>
+
           </div>
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-[#ef98a7] font-mono text-xs">
-            Project Visual Preview
+          /* Single Image / SVG Illustration */
+          <div className="relative w-full h-full flex items-center justify-center p-2">
+            {project.image ? (
+              <Image
+                src={project.image}
+                alt={`${project.name} preview`}
+                fill
+                className="object-contain object-center group-hover:scale-[1.02] transition-transform duration-300"
+              />
+            ) : (
+              <div className="text-[#58795e] font-mono text-xs">Project Preview</div>
+            )}
           </div>
         )}
 
         {/* Platform Badge Overlay */}
-        <div className="absolute top-3 right-3 flex items-center gap-1.5 z-10">
-          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-[#281c36]/90 text-[#fcfcfb] border border-[#ef98a7]/40 backdrop-blur-md shadow-lg">
-            <Smartphone className="w-3.5 h-3.5 text-[#f7bea9]" />
+        <div className="absolute top-3 right-3 flex items-center gap-1.5 z-30">
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-[#1d2c22]/90 text-[#f4faf5] border border-[#94ca9d]/40 backdrop-blur-md shadow-lg">
+            <Smartphone className="w-3.5 h-3.5 text-[#bafdc5]" />
             {project.platform}
           </span>
         </div>
 
-        {/* Multi-Screenshot Gallery Arrows & Counter */}
-        {images.length > 1 && (
-          <>
-            <button
-              type="button"
-              onClick={prevImage}
-              className="absolute left-2.5 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-[#1c1426]/80 hover:bg-[#ef98a7] text-white border border-[#ef98a7]/40 backdrop-blur-md shadow-md transition-all z-10"
-              aria-label="Previous screenshot"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-
-            <button
-              type="button"
-              onClick={nextImage}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-[#1c1426]/80 hover:bg-[#ef98a7] text-white border border-[#ef98a7]/40 backdrop-blur-md shadow-md transition-all z-10"
-              aria-label="Next screenshot"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-
-            {/* Thumbnail Dots */}
-            <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#1c1426]/85 border border-[#ef98a7]/30 backdrop-blur-md z-10">
-              <Eye className="w-3 h-3 text-[#f7bea9] mr-1" />
-              {images.map((_, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setActiveImageIndex(idx);
-                  }}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    activeImageIndex === idx ? "bg-[#ef98a7] w-5" : "bg-white/40 hover:bg-white/70"
-                  }`}
-                  aria-label={`View screenshot ${idx + 1}`}
-                />
-              ))}
-            </div>
-          </>
-        )}
       </div>
 
       {/* Card Body */}
@@ -96,10 +108,10 @@ function ProjectCard({ project }: { project: ProjectItem }) {
           {/* Category & Title */}
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-[11px] font-mono font-bold text-[#604f71] dark:text-[#f7bea9] uppercase tracking-wider bg-[#f7bea9]/25 dark:bg-[#604f71]/50 px-2 py-0.5 rounded border border-[#ef98a7]/35">
+              <span className="text-[11px] font-mono font-bold text-[#2c3c2f] dark:text-[#bafdc5] uppercase tracking-wider bg-[#c9efce]/40 dark:bg-[#2c3c2f]/70 px-2 py-0.5 rounded border border-[#94ca9d]/40">
                 {project.category}
               </span>
-              <span className="text-xs font-mono text-[#ef98a7] dark:text-[#f7bea9] font-semibold">
+              <span className="text-xs font-mono text-[#58795e] dark:text-[#94ca9d] font-semibold">
                 {project.role}
               </span>
             </div>
@@ -121,7 +133,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
             <ul className="space-y-1.5 text-xs text-[var(--text-body)]">
               {project.testingFocus.map((focus, idx) => (
                 <li key={idx} className="flex items-start gap-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-[#ef98a7] flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5] flex-shrink-0 mt-0.5" />
                   <span className="leading-relaxed">{focus}</span>
                 </li>
               ))}
@@ -150,11 +162,11 @@ function ProjectCard({ project }: { project: ProjectItem }) {
                 href={project.appStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-[#604f71] hover:bg-[#807094] border border-[#807094]/40 transition-all shadow-sm"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-[#2c3c2f] hover:bg-[#58795e] border border-[#58795e]/50 transition-all shadow-sm"
               >
                 <Apple className="w-3.5 h-3.5 text-white" />
                 <span>App Store</span>
-                <ExternalLink className="w-3 h-3 text-[#f7bea9] ml-0.5" />
+                <ExternalLink className="w-3 h-3 text-[#bafdc5] ml-0.5" />
               </a>
             )}
 
@@ -163,11 +175,11 @@ function ProjectCard({ project }: { project: ProjectItem }) {
                 href={project.playStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-[#807094] hover:bg-[#604f71] border border-[#ef98a7]/40 transition-all shadow-sm"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-[#58795e] hover:bg-[#2c3c2f] border border-[#94ca9d]/50 transition-all shadow-sm"
               >
-                <Play className="w-3.5 h-3.5 text-[#f7bea9] fill-[#f7bea9]" />
+                <Play className="w-3.5 h-3.5 text-[#bafdc5] fill-[#bafdc5]" />
                 <span>Google Play</span>
-                <ExternalLink className="w-3 h-3 text-[#f7bea9] ml-0.5" />
+                <ExternalLink className="w-3 h-3 text-[#bafdc5] ml-0.5" />
               </a>
             )}
           </div>
@@ -206,7 +218,7 @@ export default function Projects() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold theme-badge">
-            <FolderGit2 className="w-3.5 h-3.5 text-[#ef98a7]" />
+            <FolderGit2 className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
             <span>15+ Live Mobile Applications</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-heading)]">
@@ -229,7 +241,7 @@ export default function Projects() {
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-mono transition-all duration-200 flex items-center gap-1.5 ${
                   isSelected
                     ? "btn-palette-primary scale-105"
-                    : "theme-card text-[var(--text-body)] hover:text-[#ef98a7] font-semibold"
+                    : "theme-card text-[var(--text-body)] hover:text-[#58795e] dark:hover:text-[#bafdc5] font-semibold"
                 }`}
               >
                 <span>{opt.label}</span>

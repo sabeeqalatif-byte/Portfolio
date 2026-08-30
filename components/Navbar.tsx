@@ -66,14 +66,14 @@ export default function Navbar() {
           className="flex items-center gap-3 group focus:outline-none"
           aria-label={`${personalData.name} - Home`}
         >
-          <div className="w-10 h-10 rounded-xl bg-[#ef98a7]/15 border border-[#ef98a7]/35 flex items-center justify-center text-[#ef98a7] group-hover:scale-105 transition-all">
-            <ShieldCheck className="w-5 h-5 text-[#ef98a7]" />
+          <div className="w-10 h-10 rounded-xl bg-[#58795e]/20 border border-[#94ca9d]/40 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] group-hover:scale-105 transition-all">
+            <ShieldCheck className="w-5 h-5 text-[#2c3c2f] dark:text-[#bafdc5]" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-[var(--text-heading)] group-hover:text-[#ef98a7] transition-colors text-base sm:text-lg leading-tight">
+            <span className="font-bold text-[var(--text-heading)] group-hover:text-[#58795e] dark:group-hover:text-[#bafdc5] transition-colors text-base sm:text-lg leading-tight">
               {personalData.name}
             </span>
-            <span className="text-xs font-mono text-[#ef98a7] font-semibold">SQA Team Lead</span>
+            <span className="text-xs font-mono text-[#58795e] dark:text-[#94ca9d] font-semibold">SQA Team Lead</span>
           </div>
         </a>
 
@@ -87,13 +87,13 @@ export default function Navbar() {
                 href={item.href}
                 className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition-all duration-150 relative ${
                   isActive
-                    ? "text-[#604f71] dark:text-[#f7bea9] bg-[#ef98a7]/15 border border-[#ef98a7]/35 shadow-sm"
-                    : "text-[var(--text-body)] hover:text-[#ef98a7] hover:bg-[#ef98a7]/10"
+                    ? "text-[#2c3c2f] dark:text-[#bafdc5] bg-[#c9efce]/40 dark:bg-[#2c3c2f]/70 border border-[#94ca9d]/40 shadow-sm"
+                    : "text-[var(--text-body)] hover:text-[#58795e] dark:hover:text-[#bafdc5] hover:bg-[#c9efce]/20"
                 }`}
               >
                 {item.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-[#ef98a7] rounded-full shadow-sm" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-[#58795e] dark:bg-[#bafdc5] rounded-full shadow-sm" />
                 )}
               </a>
             );
@@ -106,14 +106,14 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="p-2.5 rounded-xl text-[var(--text-heading)] hover:text-[#ef98a7] bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[#ef98a7] transition-all shadow-sm focus:outline-none"
+            className="p-2.5 rounded-xl text-[var(--text-heading)] hover:text-[#58795e] dark:hover:text-[#bafdc5] bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[#94ca9d] transition-all shadow-sm focus:outline-none"
             aria-label={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
             title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
           >
             {theme === "dark" ? (
-              <Sun className="w-4 h-4 text-[#f7bea9] hover:rotate-45 transition-transform" />
+              <Sun className="w-4 h-4 text-[#bafdc5] hover:rotate-45 transition-transform" />
             ) : (
-              <Moon className="w-4 h-4 text-[#604f71] hover:-rotate-12 transition-transform" />
+              <Moon className="w-4 h-4 text-[#2c3c2f] hover:-rotate-12 transition-transform" />
             )}
           </button>
 
@@ -128,7 +128,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-xl text-[var(--text-heading)] hover:text-[#ef98a7] bg-[var(--bg-card)] border border-[var(--border-color)] focus:outline-none"
+            className="md:hidden p-2 rounded-xl text-[var(--text-heading)] hover:text-[#58795e] dark:hover:text-[#bafdc5] bg-[var(--bg-card)] border border-[var(--border-color)] focus:outline-none"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -149,8 +149,8 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-2.5 rounded-lg text-sm font-semibold transition-all ${
                   isActive
-                    ? "text-[#604f71] dark:text-[#f7bea9] bg-[#ef98a7]/20 border border-[#ef98a7]/35"
-                    : "text-[var(--text-body)] hover:text-[#ef98a7] hover:bg-[#ef98a7]/10"
+                    ? "text-[#2c3c2f] dark:text-[#bafdc5] bg-[#c9efce]/40 dark:bg-[#2c3c2f]/70 border border-[#94ca9d]/40"
+                    : "text-[var(--text-body)] hover:text-[#58795e] dark:hover:text-[#bafdc5] hover:bg-[#c9efce]/20"
                 }`}
               >
                 {item.label}

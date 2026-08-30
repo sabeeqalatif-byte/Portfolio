@@ -236,11 +236,11 @@ export const projects: ProjectItem[] = [
     toolsUsed: ["Postman", "GitLab", "iOS & Android Real Devices", "OCR Vision", "In-App Purchases (IAP)"],
     appStoreUrl: "https://apps.apple.com/us/app/ai-math-solver-scanner-app/id6774058690",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.aistudy.math.scan.problemsolver&hl=en",
-    image: "/images/projects/ai-math-solver-1.webp",
+    image: "/images/projects/math-collage-1.webp",
     screenshots: [
-      "/images/projects/ai-math-solver-1.webp",
-      "/images/projects/ai-math-solver-2.webp",
-      "/images/projects/ai-math-solver-3.webp",
+      "/images/projects/math-collage-1.webp",
+      "/images/projects/math-collage-2.webp",
+      "/images/projects/math-collage-3.webp",
     ],
   },
   {

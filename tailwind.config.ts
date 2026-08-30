@@ -12,13 +12,13 @@ const config: Config = {
     extend: {
       colors: {
         palette: {
-          ivory: "#fcfcfb",
-          peach: "#f7bea9",
-          coral: "#ef98a7",
-          lavender: "#807094",
-          plum: "#604f71",
-          deep: "#1e1628",
-          darkplum: "#2d203a",
+          mint: "#bafdc5",
+          celadon: "#94ca9d",
+          forest: "#2c3c2f",
+          pistachio: "#c9efce",
+          sage: "#58795e",
+          darkforest: "#152018",
+          cardforest: "#1e2e22",
         },
         background: "var(--bg-primary)",
         surface: "var(--bg-secondary)",
@@ -45,8 +45,8 @@ const config: Config = {
         ],
       },
       boxShadow: {
-        plum: "0 4px 20px -2px rgba(96, 79, 113, 0.12)",
-        "plum-glow": "0 0 30px -4px rgba(239, 152, 167, 0.25)",
+        sage: "0 4px 20px -2px rgba(44, 60, 47, 0.12)",
+        "mint-glow": "0 0 30px -4px rgba(186, 253, 197, 0.25)",
       },
     },
   },

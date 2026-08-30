@@ -10,7 +10,7 @@ export default function About() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold theme-badge">
-            <Layers className="w-3.5 h-3.5 text-[#ef98a7]" />
+            <Layers className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
             <span>Professional Profile</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-heading)]">
@@ -36,13 +36,13 @@ export default function About() {
               </p>
 
               <div className="pt-4 border-t border-[var(--border-color)]">
-                <div className="text-xs font-mono text-[#ef98a7] dark:text-[#f7bea9] font-bold uppercase tracking-wider mb-2">
+                <div className="text-xs font-mono text-[#58795e] dark:text-[#bafdc5] font-bold uppercase tracking-wider mb-2">
                   Key Strengths &amp; Highlights:
                 </div>
                 <ul className="space-y-2 text-xs sm:text-sm text-[var(--text-body)]">
                   {personalData.about.highlights.map((highlight, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="text-[#ef98a7] font-bold mt-0.5">▹</span>
+                      <span className="text-[#58795e] dark:text-[#bafdc5] font-bold mt-0.5">▹</span>
                       <span>{highlight}</span>
                     </li>
                   ))}
@@ -52,7 +52,7 @@ export default function About() {
 
             {/* Education & Language Card */}
             <div className="theme-card rounded-2xl p-6 space-y-4">
-              <div className="flex items-center gap-2.5 text-[#ef98a7] dark:text-[#f7bea9] font-bold text-base">
+              <div className="flex items-center gap-2.5 text-[#58795e] dark:text-[#bafdc5] font-bold text-base">
                 <GraduationCap className="w-5 h-5" />
                 <span>Education</span>
               </div>
@@ -61,7 +61,7 @@ export default function About() {
                   <div className="text-sm sm:text-base font-bold text-[var(--text-heading)]">
                     {edu.degree}
                   </div>
-                  <div className="text-xs sm:text-sm text-[#807094] dark:text-[#f7bea9] font-semibold">
+                  <div className="text-xs sm:text-sm text-[#58795e] dark:text-[#94ca9d] font-semibold">
                     {edu.institution} &bull; {edu.location}
                   </div>
                   <div className="text-xs font-mono text-[var(--text-muted)]">
@@ -71,7 +71,7 @@ export default function About() {
               ))}
 
               <div className="pt-3 border-t border-[var(--border-color)] flex items-center justify-between text-xs text-[var(--text-body)]">
-                <div className="flex items-center gap-1.5 text-[#ef98a7] dark:text-[#f7bea9] font-mono font-semibold">
+                <div className="flex items-center gap-1.5 text-[#58795e] dark:text-[#bafdc5] font-mono font-semibold">
                   <Languages className="w-4 h-4" />
                   <span>Language Proficiency:</span>
                 </div>
@@ -84,7 +84,7 @@ export default function About() {
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             
             <div className="theme-card rounded-2xl p-5 space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-[#ef98a7]/15 border border-[#ef98a7]/30 flex items-center justify-center text-[#ef98a7]">
+              <div className="w-10 h-10 rounded-xl bg-[#58795e]/15 border border-[#94ca9d]/30 flex items-center justify-center text-[#58795e] dark:text-[#bafdc5]">
                 <Smartphone className="w-5 h-5" />
               </div>
               <h4 className="text-base font-bold text-[var(--text-heading)]">15+ Store Mobile Apps</h4>
@@ -94,8 +94,8 @@ export default function About() {
             </div>
 
             <div className="theme-card rounded-2xl p-5 space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-[#f7bea9]/20 border border-[#f7bea9]/35 flex items-center justify-center text-[#f7bea9] dark:text-[#f7bea9]">
-                <Terminal className="w-5 h-5 text-[#ef98a7] dark:text-[#f7bea9]" />
+              <div className="w-10 h-10 rounded-xl bg-[#bafdc5]/20 border border-[#bafdc5]/40 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5]">
+                <Terminal className="w-5 h-5 text-[#58795e] dark:text-[#bafdc5]" />
               </div>
               <h4 className="text-base font-bold text-[var(--text-heading)]">Antigravity Automation</h4>
               <p className="text-xs text-[var(--text-body)] leading-relaxed">
@@ -104,8 +104,8 @@ export default function About() {
             </div>
 
             <div className="theme-card rounded-2xl p-5 space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-[#807094]/15 border border-[#807094]/30 flex items-center justify-center text-[#807094] dark:text-[#ef98a7]">
-                <Bug className="w-5 h-5 text-[#807094] dark:text-[#f7bea9]" />
+              <div className="w-10 h-10 rounded-xl bg-[#94ca9d]/15 border border-[#94ca9d]/30 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5]">
+                <Bug className="w-5 h-5 text-[#58795e] dark:text-[#bafdc5]" />
               </div>
               <h4 className="text-base font-bold text-[var(--text-heading)]">Defect Lifecycle</h4>
               <p className="text-xs text-[var(--text-body)] leading-relaxed">
@@ -114,8 +114,8 @@ export default function About() {
             </div>
 
             <div className="theme-card rounded-2xl p-5 space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-[#604f71]/15 border border-[#604f71]/30 flex items-center justify-center text-[#604f71] dark:text-[#f7bea9]">
-                <Users className="w-5 h-5 text-[#604f71] dark:text-[#f7bea9]" />
+              <div className="w-10 h-10 rounded-xl bg-[#2c3c2f]/15 border border-[#2c3c2f]/30 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5]">
+                <Users className="w-5 h-5 text-[#58795e] dark:text-[#bafdc5]" />
               </div>
               <h4 className="text-base font-bold text-[var(--text-heading)]">QA Team Leadership</h4>
               <p className="text-xs text-[var(--text-body)] leading-relaxed">

@@ -12,14 +12,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[var(--border-color)]">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-[#ef98a7]/15 border border-[#ef98a7]/30 flex items-center justify-center text-[#ef98a7]">
-              <ShieldCheck className="w-5 h-5 text-[#ef98a7]" />
+            <div className="w-9 h-9 rounded-xl bg-[#58795e]/20 border border-[#94ca9d]/35 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5]">
+              <ShieldCheck className="w-5 h-5 text-[#2c3c2f] dark:text-[#bafdc5]" />
             </div>
             <div>
               <div className="font-bold text-[var(--text-heading)] text-base">
                 {personalData.name}
               </div>
-              <div className="text-xs font-mono text-[#ef98a7] dark:text-[#f7bea9] font-semibold">
+              <div className="text-xs font-mono text-[#58795e] dark:text-[#94ca9d] font-semibold">
                 Software Quality Assurance Engineer | SQA Team Lead
               </div>
             </div>
@@ -31,7 +31,7 @@ export default function Footer() {
               <a
                 key={item.label}
                 href={item.href}
-                className="hover:text-[#ef98a7] transition-colors"
+                className="hover:text-[#58795e] dark:hover:text-[#bafdc5] transition-colors"
               >
                 {item.label}
               </a>
@@ -44,7 +44,7 @@ export default function Footer() {
           <div>
             &copy; {currentYear} {personalData.name}. All rights reserved.
           </div>
-          <div className="text-[#ef98a7] dark:text-[#f7bea9] font-semibold">
+          <div className="text-[#58795e] dark:text-[#94ca9d] font-semibold">
             Engineered for Production on Netlify
           </div>
         </div>
