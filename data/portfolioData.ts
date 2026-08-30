@@ -30,6 +30,7 @@ export interface ProjectItem {
   appStoreUrl?: string;
   playStoreUrl?: string;
   image?: string;
+  screenshots?: string[];
 }
 
 export interface ExpertiseArea {
@@ -235,7 +236,12 @@ export const projects: ProjectItem[] = [
     toolsUsed: ["Postman", "GitLab", "iOS & Android Real Devices", "OCR Vision", "In-App Purchases (IAP)"],
     appStoreUrl: "https://apps.apple.com/us/app/ai-math-solver-scanner-app/id6774058690",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.aistudy.math.scan.problemsolver&hl=en",
-    image: "/images/projects/ai-maths-solver.svg",
+    image: "/images/projects/ai-math-solver-1.webp",
+    screenshots: [
+      "/images/projects/ai-math-solver-1.webp",
+      "/images/projects/ai-math-solver-2.webp",
+      "/images/projects/ai-math-solver-3.webp",
+    ],
   },
   {
     id: "ai-voice-keyboard",
