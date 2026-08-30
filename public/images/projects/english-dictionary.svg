@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" fill="none">
+  <defs>
+    <linearGradient id="bg-dict" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081418" />
+      <stop offset="100%" stop-color="#0e262e" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" rx="12" fill="url(#bg-dict)"/>
+  <rect x="1" y="1" width="598" height="338" rx="11" stroke="#2dd4bf" stroke-opacity="0.2" stroke-width="1.5"/>
+
+  <!-- iPhone / iOS Frame Mockup -->
+  <g transform="translate(190, 30)">
+    <rect width="220" height="280" rx="24" fill="#081216" stroke="#2dd4bf" stroke-opacity="0.3" stroke-width="2"/>
+    <rect x="75" y="10" width="70" height="4" rx="2" fill="#2dd4bf" fill-opacity="0.4"/>
+
+    <!-- Search Bar -->
+    <rect x="16" y="26" width="188" height="32" rx="8" fill="#0c2229" stroke="#14b8a6" stroke-opacity="0.3"/>
+    <text x="28" y="46" fill="#99f6e4" font-family="sans-serif" font-size="11">🔍 Search word / camera OCR</text>
+
+    <!-- Dictionary Entry Card -->
+    <rect x="16" y="68" width="188" height="135" rx="10" fill="#0f2932" stroke="#2dd4bf" stroke-opacity="0.25"/>
+    <text x="28" y="92" fill="#5eead4" font-family="sans-serif" font-size="16" font-weight="700">Resilience</text>
+    <text x="28" y="108" fill="#94a3b8" font-family="monospace" font-size="10">/rɪˈzɪl.jəns/ • noun</text>
+    
+    <!-- Audio TTS Button -->
+    <rect x="150" y="78" width="42" height="24" rx="12" fill="#14b8a6" fill-opacity="0.2" stroke="#2dd4bf" stroke-opacity="0.4"/>
+    <path d="M165 85v10m3-8a3 3 0 0 1 0 6m3-8a6 6 0 0 1 0 10" stroke="#5eead4" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Definition & Synonyms -->
+    <text x="28" y="130" fill="#f0fdfa" font-family="sans-serif" font-size="10">The capacity to withstand or recover quickly from difficulties.</text>
+    <rect x="28" y="160" width="60" height="18" rx="4" fill="rgba(45, 212, 191, 0.15)"/>
+    <text x="58" y="172" fill="#5eead4" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">SQLite OK</text>
+    <rect x="95" y="160" width="60" height="18" rx="4" fill="rgba(16, 185, 129, 0.15)"/>
+    <text x="125" y="172" fill="#6ee7b7" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">TTS 1.0x OK</text>
+
+    <!-- Word of the Day Widget Preview -->
+    <rect x="16" y="212" width="188" height="50" rx="8" fill="#0c1f26" stroke="#14b8a6" stroke-opacity="0.2"/>
+    <text x="28" y="230" fill="#2dd4bf" font-family="monospace" font-size="9" font-weight="700">iOS WIDGET SYNC</text>
+    <text x="28" y="248" fill="#94a3b8" font-family="sans-serif" font-size="10">Word of the Day &bull; Verified</text>
+  </g>
+
+  <!-- Left Floating QA Badge -->
+  <g transform="translate(30, 130)">
+    <rect width="135" height="48" rx="8" fill="#0c2027" stroke="#2dd4bf" stroke-opacity="0.25"/>
+    <text x="14" y="22" fill="#5eead4" font-family="monospace" font-size="10" font-weight="700">iOS APP QA</text>
+    <text x="14" y="38" fill="#94a3b8" font-family="sans-serif" font-size="10">Offline SQLite &amp; TTS</text>
+  </g>
+
+  <!-- Right Floating QA Badge -->
+  <g transform="translate(435, 130)">
+    <rect width="135" height="48" rx="8" fill="#0c2027" stroke="#2dd4bf" stroke-opacity="0.25"/>
+    <text x="14" y="22" fill="#10b981" font-family="monospace" font-size="10" font-weight="700">IAP MONETIZATION</text>
+    <text x="14" y="38" fill="#94a3b8" font-family="sans-serif" font-size="10">Sub / Ad Removal OK</text>
+  </g>
+</svg>
