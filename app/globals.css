@@ -2,15 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Default: Dark Theme (Midnight Aurora) */
+  --bg-primary: #0a0f1d;
+  --bg-secondary: #0f172a;
+  --bg-card: rgba(19, 29, 51, 0.65);
+  --bg-card-hover: rgba(28, 42, 72, 0.82);
+  --bg-nav: rgba(10, 15, 29, 0.82);
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: rgba(129, 140, 248, 0.18);
+  --border-hover: rgba(129, 140, 248, 0.4);
+  --accent-color: #818cf8;
+  --accent-subtle: rgba(99, 102, 241, 0.14);
+  --accent-gradient: linear-gradient(135deg, #a5b4fc 0%, #38bdf8 50%, #c084fc 100%);
+  --badge-bg: rgba(99, 102, 241, 0.14);
+  --badge-text: #c7d2fe;
+  --card-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 12px 36px -4px rgba(0, 0, 0, 0.5), 0 0 25px -2px rgba(99, 102, 241, 0.22);
+}
+
+[data-theme="light"] {
+  /* Light Theme (Soothing Calming Pearl & Lavender) */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --bg-nav: rgba(248, 250, 252, 0.88);
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-color: rgba(199, 210, 254, 0.8);
+  --border-hover: rgba(99, 102, 241, 0.45);
+  --accent-color: #4f46e5;
+  --accent-subtle: rgba(99, 102, 241, 0.08);
+  --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #0284c7 50%, #9333ea 100%);
+  --badge-bg: rgba(99, 102, 241, 0.08);
+  --badge-text: #4338ca;
+  --card-shadow: 0 4px 20px -2px rgba(99, 102, 241, 0.08);
+  --card-shadow-hover: 0 12px 30px -4px rgba(99, 102, 241, 0.16), 0 0 20px -2px rgba(56, 189, 248, 0.15);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   body {
-    background-color: #080d1a;
-    color: #f8fafc;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
@@ -23,12 +65,16 @@
 
   /* Accessible focus indicators */
   :focus-visible {
-    @apply outline-none ring-2 ring-accent-light ring-offset-2 ring-offset-background;
+    @apply outline-none ring-2 ring-indigo-400 ring-offset-2 ring-offset-background;
   }
 
   /* Selection highlight */
   ::selection {
     background-color: rgba(99, 102, 241, 0.3);
+    color: #4338ca;
+  }
+
+  [data-theme="dark"] ::selection {
     color: #c7d2fe;
   }
 
@@ -49,37 +95,36 @@
 }
 
 @layer utilities {
-  /* Soothing Midnight Aurora Glass Card */
+  /* Soothing Glass Card for both Light and Dark themes */
   .glass-card {
-    background-color: rgba(15, 23, 42, 0.62);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(129, 140, 248, 0.16);
-    box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.35);
+    background-color: var(--bg-card);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .glass-card:hover {
-    background-color: rgba(22, 33, 60, 0.78);
-    border-color: rgba(129, 140, 248, 0.36);
-    box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.5), 0 0 25px -2px rgba(99, 102, 241, 0.18);
+    background-color: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    box-shadow: var(--card-shadow-hover);
     transform: translateY(-2px);
   }
 
   /* Glass Navigation */
   .glass-nav {
-    background-color: rgba(8, 13, 26, 0.78);
+    background-color: var(--bg-nav);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(129, 140, 248, 0.14);
+    border-bottom: 1px solid var(--border-color);
   }
 
-  /* Glass Badge / Tag */
-  .glass-badge {
-    background-color: rgba(99, 102, 241, 0.12);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(129, 140, 248, 0.22);
-    color: #c7d2fe;
+  /* Gradient Text */
+  .gradient-title {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

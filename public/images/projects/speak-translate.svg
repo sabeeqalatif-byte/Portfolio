@@ -1,44 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" fill="none">
   <defs>
-    <linearGradient id="bg-trans" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07151a" />
-      <stop offset="100%" stop-color="#0d242a" />
+    <linearGradient id="trans-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#3b0764" />
     </linearGradient>
+    <filter id="trans-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
   </defs>
-  <rect width="600" height="340" rx="12" fill="url(#bg-trans)"/>
-  <rect x="1" y="1" width="598" height="338" rx="11" stroke="#2dd4bf" stroke-opacity="0.2" stroke-width="1.5"/>
 
-  <!-- Two Language Bubble UI Cards -->
-  <g transform="translate(130, 50)">
-    <!-- Source Language Bubble -->
-    <rect width="340" height="90" rx="12" fill="#0c2229" stroke="#14b8a6" stroke-opacity="0.3"/>
-    <rect x="16" y="16" width="60" height="20" rx="4" fill="rgba(20, 184, 166, 0.15)"/>
-    <text x="46" y="30" fill="#5eead4" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle">ENGLISH</text>
-    <text x="16" y="60" fill="#f0fdfa" font-family="sans-serif" font-size="14" font-weight="500">"Where is the nearest subway station?"</text>
-    <circle cx="305" cy="45" r="14" fill="#0e2a33" stroke="#2dd4bf" stroke-width="1.5"/>
-    <path d="M302 40v10l7-5-7-5z" fill="#2dd4bf"/>
+  <rect width="640" height="360" rx="16" fill="url(#trans-grad)"/>
+  <rect x="1" y="1" width="638" height="358" rx="15" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="2"/>
+
+  <!-- Top Title Tag -->
+  <rect x="24" y="18" width="240" height="26" rx="13" fill="rgba(56, 189, 248, 0.25)" stroke="#38bdf8" stroke-opacity="0.5"/>
+  <text x="144" y="35" fill="#bae6fd" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">🌐 TWO-WAY VOICE &amp; TEXT TRANSLATOR</text>
+
+  <!-- Left: Live Conversation Bubbles -->
+  <g transform="translate(35, 55)">
+    <!-- English Bubble -->
+    <rect width="260" height="100" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#trans-glow)"/>
+    <g transform="translate(16, 14)">
+      <rect width="65" height="20" rx="6" fill="#0284c7" fill-opacity="0.3"/>
+      <text x="32" y="27" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">ENGLISH</text>
+      
+      <!-- Audio Wave Button -->
+      <circle cx="215" cy="10" r="12" fill="#0284c7"/>
+      <path d="M211 5v10l8-5-8-5z" fill="#fff"/>
+
+      <text x="0" y="55" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="500">"Where is the nearest subway station?"</text>
+    </g>
+
+    <!-- Urdu Translated Bubble -->
+    <g transform="translate(0, 115)">
+      <rect width="260" height="110" rx="16" fill="#1e1b4b" stroke="#c084fc" stroke-width="1.5" filter="url(#trans-glow)"/>
+      <g transform="translate(16, 14)">
+        <rect width="55" height="20" rx="6" fill="#a855f7" fill-opacity="0.3"/>
+        <text x="27" y="27" fill="#d8b4fe" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">URDU</text>
+        
+        <!-- Audio Wave Button -->
+        <circle cx="215" cy="10" r="12" fill="#9333ea"/>
+        <path d="M211 5v10l8-5-8-5z" fill="#fff"/>
+
+        <text x="0" y="55" fill="#f5d0fe" font-family="serif" font-size="16" font-weight="bold" text-anchor="start">"قریب ترین سب وے اسٹیشن کہاں ہے؟"</text>
+      </g>
+    </g>
+
+    <!-- Bottom Status -->
+    <rect x="0" y="235" width="260" height="26" rx="6" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1"/>
+    <text x="130" y="252" fill="#6ee7b7" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">✓ Nastaliq Font &amp; Speech Playback OK</text>
   </g>
 
-  <!-- Exchange / Translation Arrow Node -->
-  <g transform="translate(280, 148)">
-    <circle cx="20" cy="20" r="18" fill="#14b8a6" fill-opacity="0.2" stroke="#2dd4bf" stroke-width="2"/>
-    <path d="M14 18l6-4v8m6-2l-6 4v-8" stroke="#5eead4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+  <!-- Right: Conversation Mode Controls -->
+  <g transform="translate(315, 55)">
+    <rect width="290" height="250" rx="18" fill="#0f172a" stroke="#818cf8" stroke-width="1.5"/>
+    <text x="18" y="30" fill="#a5b4fc" font-family="sans-serif" font-size="12" font-weight="bold">CONVERSATION TRANSLATION MODE</text>
+    
+    <!-- Language Exchange Switcher -->
+    <g transform="translate(18, 48)">
+      <rect width="115" height="36" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <text x="57" y="70" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">English 🇺🇸</text>
 
-  <!-- Target Language Bubble -->
-  <g transform="translate(130, 195)">
-    <rect width="340" height="90" rx="12" fill="#081a20" stroke="#2dd4bf" stroke-opacity="0.4"/>
-    <rect x="16" y="16" width="60" height="20" rx="4" fill="rgba(16, 185, 129, 0.15)"/>
-    <text x="46" y="30" fill="#6ee7b7" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle">SPANISH</text>
-    <text x="16" y="60" fill="#ccfbf1" font-family="sans-serif" font-size="14" font-weight="500">"¿Dónde está la estación de metro más cercana?"</text>
-    <circle cx="305" cy="45" r="14" fill="#0e2a33" stroke="#10b981" stroke-width="1.5"/>
-    <path d="M302 40v10l7-5-7-5z" fill="#10b981"/>
-  </g>
+      <circle cx="127" cy="18" r="12" fill="#6366f1"/>
+      <path d="M123 15l4-3v6 M131 21l-4 3v-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
 
-  <!-- Floating QA Badge -->
-  <g transform="translate(30, 130)">
-    <rect width="115" height="42" rx="8" fill="#0c2027" stroke="#2dd4bf" stroke-opacity="0.25"/>
-    <text x="12" y="19" fill="#5eead4" font-family="monospace" font-size="9" font-weight="700">API SYNC QA</text>
-    <text x="12" y="33" fill="#94a3b8" font-family="sans-serif" font-size="10">Payload Validated</text>
+      <rect x="139" width="115" height="36" rx="8" fill="#1e293b" stroke="#c084fc" stroke-width="1"/>
+      <text x="196" y="70" fill="#c084fc" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Urdu 🇵🇰</text>
+    </g>
+
+    <!-- Dual Mic Action Buttons -->
+    <g transform="translate(18, 105)">
+      <!-- Left Mic Button -->
+      <g transform="translate(10, 0)">
+        <circle cx="45" cy="45" r="35" fill="#0284c7" stroke="#38bdf8" stroke-width="3" filter="url(#trans-glow)"/>
+        <path d="M45 35v12 M40 43a5 5 0 0 0 10 0" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="45" y="98" fill="#38bdf8" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Speak English</text>
+      </g>
+
+      <!-- Right Mic Button -->
+      <g transform="translate(145, 0)">
+        <circle cx="45" cy="45" r="35" fill="#9333ea" stroke="#c084fc" stroke-width="3" filter="url(#trans-glow)"/>
+        <path d="M45 35v12 M40 43a5 5 0 0 0 10 0" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="45" y="98" fill="#c084fc" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Speak Urdu</text>
+      </g>
+    </g>
+
+    <!-- SQA Verified Label -->
+    <rect x="18" y="212" width="254" height="26" rx="6" fill="#10b981" fill-opacity="0.2" stroke="#34d399" stroke-width="1"/>
+    <text x="145" y="229" fill="#a7f3d0" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">✓ SQA VERIFIED: App Store &amp; Play Store</text>
   </g>
 </svg>
