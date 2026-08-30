@@ -31,14 +31,14 @@ export default function Projects() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-indigo-200 bg-indigo-950/60 border border-indigo-400/30">
-            <FolderGit2 className="w-3.5 h-3.5 text-indigo-300" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold theme-badge">
+            <FolderGit2 className="w-3.5 h-3.5 text-[#ef98a7]" />
             <span>15+ Live Mobile Applications</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-100">
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-heading)]">
             Verified Store Projects
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-[var(--text-body)] text-sm sm:text-base leading-relaxed">
             Real-world mobile apps tested and verified on the Apple App Store &amp; Google Play Store, covering AI OCR vision, STT/TTS voice synthesis, Antigravity automation, and iOS compliance.
           </p>
         </div>
@@ -54,12 +54,12 @@ export default function Projects() {
                 onClick={() => setSelectedFilter(opt.label)}
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-mono transition-all duration-200 flex items-center gap-1.5 ${
                   isSelected
-                    ? "bg-gradient-to-r from-indigo-500 via-sky-500 to-purple-500 text-white font-bold shadow-[0_0_18px_rgba(99,102,241,0.35)] scale-105"
-                    : "bg-indigo-950/50 text-slate-300 border border-indigo-400/20 hover:border-indigo-400/40 hover:text-indigo-200"
+                    ? "btn-palette-primary scale-105"
+                    : "theme-card text-[var(--text-body)] hover:text-[#ef98a7] font-semibold"
                 }`}
               >
                 <span>{opt.label}</span>
-                <span className={`px-1.5 py-0.2 rounded-full text-[10px] ${isSelected ? "bg-white/20 text-white" : "bg-indigo-900/50 text-indigo-300"}`}>
+                <span className={`px-1.5 py-0.2 rounded-full text-[10px] ${isSelected ? "bg-white/30 text-white" : "theme-badge"}`}>
                   {opt.count}
                 </span>
               </button>
@@ -72,10 +72,10 @@ export default function Projects() {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group"
+              className="theme-card rounded-2xl overflow-hidden flex flex-col justify-between group shadow-lg"
             >
               {/* Project Image Preview / Visual Illustration */}
-              <div className="relative w-full h-48 sm:h-56 bg-slate-950/70 border-b border-indigo-400/15 overflow-hidden">
+              <div className="relative w-full h-52 sm:h-60 bg-[#1c1426] border-b border-[var(--border-color)] overflow-hidden">
                 {project.image ? (
                   <Image
                     src={project.image}
@@ -84,15 +84,15 @@ export default function Projects() {
                     className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-indigo-400/60 font-mono text-xs">
+                  <div className="w-full h-full flex items-center justify-center text-[#ef98a7] font-mono text-xs">
                     Project Visual Preview
                   </div>
                 )}
 
                 {/* Platform Badge Overlay */}
                 <div className="absolute top-3 right-3 flex items-center gap-1.5">
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono font-semibold bg-[#0a0f1d]/90 text-indigo-200 border border-indigo-400/30 backdrop-blur-md shadow-lg">
-                    <Smartphone className="w-3.5 h-3.5 text-indigo-300" />
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-[#281c36]/90 text-[#fcfcfb] border border-[#ef98a7]/40 backdrop-blur-md shadow-lg">
+                    <Smartphone className="w-3.5 h-3.5 text-[#f7bea9]" />
                     {project.platform}
                   </span>
                 </div>
@@ -104,32 +104,32 @@ export default function Projects() {
                   {/* Category & Title */}
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[11px] font-mono font-semibold text-sky-300 uppercase tracking-wider bg-sky-950/60 px-2 py-0.5 rounded border border-sky-400/20">
+                      <span className="text-[11px] font-mono font-bold text-[#604f71] dark:text-[#f7bea9] uppercase tracking-wider bg-[#f7bea9]/25 dark:bg-[#604f71]/50 px-2 py-0.5 rounded border border-[#ef98a7]/35">
                         {project.category}
                       </span>
-                      <span className="text-xs font-mono text-indigo-300/80">
+                      <span className="text-xs font-mono text-[#ef98a7] dark:text-[#f7bea9] font-semibold">
                         {project.role}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-slate-100 mt-1">
+                    <h3 className="text-xl font-bold text-[var(--text-heading)] mt-1">
                       {project.name}
                     </h3>
                   </div>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[var(--text-body)] leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* Testing Focus Highlights */}
-                  <div className="p-3.5 rounded-xl bg-indigo-950/40 border border-indigo-400/15 space-y-2">
-                    <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-indigo-200">
+                  <div className="p-3.5 rounded-xl theme-subtle-box space-y-2">
+                    <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-[var(--text-heading)]">
                       QA Responsibilities &amp; Testing Focus:
                     </div>
-                    <ul className="space-y-1.5 text-xs text-slate-300">
+                    <ul className="space-y-1.5 text-xs text-[var(--text-body)]">
                       {project.testingFocus.map((focus, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                          <CheckCircle className="w-3.5 h-3.5 text-[#ef98a7] flex-shrink-0 mt-0.5" />
                           <span className="leading-relaxed">{focus}</span>
                         </li>
                       ))}
@@ -138,13 +138,13 @@ export default function Projects() {
                 </div>
 
                 {/* Tools & Live Store Links */}
-                <div className="space-y-4 pt-4 border-t border-indigo-400/15">
+                <div className="space-y-4 pt-4 border-t border-[var(--border-color)]">
                   {/* Tool Badges */}
                   <div className="flex flex-wrap gap-1.5">
                     {project.toolsUsed.map((tool) => (
                       <span
                         key={tool}
-                        className="px-2 py-0.5 text-[11px] font-mono rounded-md bg-indigo-950/50 text-slate-300 border border-indigo-400/20"
+                        className="px-2 py-0.5 text-[11px] font-mono rounded-md theme-badge font-semibold"
                       >
                         {tool}
                       </span>
@@ -158,11 +158,11 @@ export default function Projects() {
                         href={project.appStoreUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-100 bg-slate-900/80 hover:bg-slate-800 border border-indigo-400/30 hover:border-indigo-300 transition-all shadow-sm hover:shadow-[0_0_12px_rgba(129,140,248,0.25)]"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-[#604f71] hover:bg-[#807094] border border-[#807094]/40 transition-all shadow-sm"
                       >
                         <Apple className="w-3.5 h-3.5 text-white" />
                         <span>App Store</span>
-                        <ExternalLink className="w-3 h-3 text-slate-400 ml-0.5" />
+                        <ExternalLink className="w-3 h-3 text-[#f7bea9] ml-0.5" />
                       </a>
                     )}
 
@@ -171,11 +171,11 @@ export default function Projects() {
                         href={project.playStoreUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-100 bg-slate-900/80 hover:bg-slate-800 border border-emerald-400/30 hover:border-emerald-300 transition-all shadow-sm hover:shadow-[0_0_12px_rgba(52,211,153,0.25)]"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-[#807094] hover:bg-[#604f71] border border-[#ef98a7]/40 transition-all shadow-sm"
                       >
-                        <Play className="w-3.5 h-3.5 text-emerald-400 fill-emerald-400" />
+                        <Play className="w-3.5 h-3.5 text-[#f7bea9] fill-[#f7bea9]" />
                         <span>Google Play</span>
-                        <ExternalLink className="w-3 h-3 text-slate-400 ml-0.5" />
+                        <ExternalLink className="w-3 h-3 text-[#f7bea9] ml-0.5" />
                       </a>
                     )}
                   </div>

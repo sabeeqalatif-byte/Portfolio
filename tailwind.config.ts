@@ -11,20 +11,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        palette: {
+          ivory: "#fcfcfb",
+          peach: "#f7bea9",
+          coral: "#ef98a7",
+          lavender: "#807094",
+          plum: "#604f71",
+          deep: "#1e1628",
+          darkplum: "#2d203a",
+        },
         background: "var(--bg-primary)",
         surface: "var(--bg-secondary)",
         card: "var(--bg-card)",
         "card-hover": "var(--bg-card-hover)",
         border: "var(--border-color)",
-        accent: {
-          DEFAULT: "#6366f1",
-          hover: "#4f46e5",
-          light: "#818cf8",
-          bright: "#a5b4fc",
-          sky: "#38bdf8",
-          cyan: "#22d3ee",
-          subtle: "var(--accent-subtle)",
-        },
       },
       fontFamily: {
         sans: [
@@ -45,8 +45,8 @@ const config: Config = {
         ],
       },
       boxShadow: {
-        glass: "0 8px 32px 0 rgba(0, 0, 0, 0.2)",
-        "glass-glow": "0 0 30px -4px rgba(99, 102, 241, 0.22)",
+        plum: "0 4px 20px -2px rgba(96, 79, 113, 0.12)",
+        "plum-glow": "0 0 30px -4px rgba(239, 152, 167, 0.25)",
       },
     },
   },

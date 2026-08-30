@@ -11,7 +11,6 @@ export default function Navbar() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
-    // Check saved theme or system preference
     const savedTheme = localStorage.getItem("sabika-portfolio-theme") as "dark" | "light" | null;
     if (savedTheme) {
       setTheme(savedTheme);
@@ -57,7 +56,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav shadow-lg" : "bg-background/70 backdrop-blur-md"
+        scrolled ? "theme-nav shadow-md" : "bg-[var(--bg-nav)] backdrop-blur-md border-b border-[var(--border-color)]"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
@@ -67,14 +66,14 @@ export default function Navbar() {
           className="flex items-center gap-3 group focus:outline-none"
           aria-label={`${personalData.name} - Home`}
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-400 group-hover:border-indigo-400 group-hover:shadow-[0_0_18px_rgba(129,140,248,0.35)] transition-all">
-            <ShieldCheck className="w-5 h-5 text-indigo-400" />
+          <div className="w-10 h-10 rounded-xl bg-[#ef98a7]/15 border border-[#ef98a7]/35 flex items-center justify-center text-[#ef98a7] group-hover:scale-105 transition-all">
+            <ShieldCheck className="w-5 h-5 text-[#ef98a7]" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-[var(--text-primary)] group-hover:text-indigo-400 transition-colors text-base sm:text-lg leading-tight">
+            <span className="font-bold text-[var(--text-heading)] group-hover:text-[#ef98a7] transition-colors text-base sm:text-lg leading-tight">
               {personalData.name}
             </span>
-            <span className="text-xs font-mono text-indigo-400">SQA Team Lead</span>
+            <span className="text-xs font-mono text-[#ef98a7] font-semibold">SQA Team Lead</span>
           </div>
         </a>
 
@@ -86,41 +85,41 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150 relative ${
+                className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition-all duration-150 relative ${
                   isActive
-                    ? "text-indigo-400 font-semibold bg-indigo-500/10 border border-indigo-400/30 shadow-sm"
-                    : "text-[var(--text-secondary)] hover:text-indigo-400 hover:bg-indigo-500/5"
+                    ? "text-[#604f71] dark:text-[#f7bea9] bg-[#ef98a7]/15 border border-[#ef98a7]/35 shadow-sm"
+                    : "text-[var(--text-body)] hover:text-[#ef98a7] hover:bg-[#ef98a7]/10"
                 }`}
               >
                 {item.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-indigo-400 rounded-full shadow-[0_0_8px_#818cf8]" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-[#ef98a7] rounded-full shadow-sm" />
                 )}
               </a>
             );
           })}
         </nav>
 
-        {/* Action Controls: Theme Switcher & Contact Button */}
+        {/* Action Controls */}
         <div className="flex items-center gap-3">
           {/* Theme Toggle Button */}
           <button
             type="button"
             onClick={toggleTheme}
-            className="p-2.5 rounded-xl text-[var(--text-secondary)] hover:text-indigo-400 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-indigo-400 transition-all shadow-sm focus:outline-none"
+            className="p-2.5 rounded-xl text-[var(--text-heading)] hover:text-[#ef98a7] bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[#ef98a7] transition-all shadow-sm focus:outline-none"
             aria-label={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
             title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
           >
             {theme === "dark" ? (
-              <Sun className="w-4 h-4 text-amber-300 hover:rotate-45 transition-transform" />
+              <Sun className="w-4 h-4 text-[#f7bea9] hover:rotate-45 transition-transform" />
             ) : (
-              <Moon className="w-4 h-4 text-indigo-600 hover:-rotate-12 transition-transform" />
+              <Moon className="w-4 h-4 text-[#604f71] hover:-rotate-12 transition-transform" />
             )}
           </button>
 
           <a
             href="#contact"
-            className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-400/30 hover:border-indigo-400 rounded-xl transition-all shadow-sm"
+            className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-bold uppercase tracking-wider btn-palette-primary rounded-xl"
           >
             Get in Touch
           </a>
@@ -129,7 +128,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-xl text-[var(--text-primary)] hover:text-indigo-400 bg-[var(--bg-card)] border border-[var(--border-color)] focus:outline-none"
+            className="md:hidden p-2 rounded-xl text-[var(--text-heading)] hover:text-[#ef98a7] bg-[var(--bg-card)] border border-[var(--border-color)] focus:outline-none"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -140,7 +139,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {isOpen && (
-        <div className="md:hidden glass-nav border-t border-[var(--border-color)] px-4 pt-3 pb-5 space-y-1 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="md:hidden theme-nav border-t border-[var(--border-color)] px-4 pt-3 pb-5 space-y-1 shadow-xl animate-in fade-in slide-in-from-top-4 duration-200">
           {navItems.map((item) => {
             const isActive = activeSection === item.href.substring(1);
             return (
@@ -148,10 +147,10 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                className={`block px-4 py-2.5 rounded-lg text-sm font-semibold transition-all ${
                   isActive
-                    ? "text-indigo-400 bg-indigo-500/15 border border-indigo-400/30 font-semibold"
-                    : "text-[var(--text-secondary)] hover:text-indigo-400 hover:bg-indigo-500/5"
+                    ? "text-[#604f71] dark:text-[#f7bea9] bg-[#ef98a7]/20 border border-[#ef98a7]/35"
+                    : "text-[var(--text-body)] hover:text-[#ef98a7] hover:bg-[#ef98a7]/10"
                 }`}
               >
                 {item.label}
@@ -162,7 +161,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="block text-center w-full py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:opacity-95 transition-opacity shadow-lg"
+              className="block text-center w-full py-2.5 px-4 rounded-xl text-sm font-bold btn-palette-primary"
             >
               Get in Touch
             </a>

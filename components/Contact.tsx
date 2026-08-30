@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { contactInfo } from "@/data/portfolioData";
-import { Mail, Phone, Linkedin, Github, MapPin, Copy, Check, Send, Globe } from "lucide-react";
+import { Mail, Phone, Linkedin, MapPin, Copy, Check, Send } from "lucide-react";
 
 export default function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -38,34 +38,34 @@ export default function Contact() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-indigo-200 bg-indigo-950/60 border border-indigo-400/30">
-            <Send className="w-3.5 h-3.5 text-indigo-300" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold theme-badge">
+            <Send className="w-3.5 h-3.5 text-[#ef98a7]" />
             <span>Connect</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-100">
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-heading)]">
             Get in Touch
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-[var(--text-body)] text-sm sm:text-base leading-relaxed">
             Interested in discussing an SQA Team Lead or Senior QA Engineer opportunity? Let's connect directly.
           </p>
         </div>
 
-        {/* Contact Glass Cards Grid */}
+        {/* Contact Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           
           {/* Email Card with Copy Feature */}
-          <div className="glass-card rounded-2xl p-5 flex items-center justify-between gap-4">
+          <div className="theme-card rounded-2xl p-5 flex items-center justify-between gap-4">
             <div className="flex items-center gap-3.5 overflow-hidden">
-              <div className="w-11 h-11 rounded-xl bg-indigo-950/80 border border-indigo-400/30 flex items-center justify-center text-indigo-300 flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-[#ef98a7]/15 border border-[#ef98a7]/30 flex items-center justify-center text-[#ef98a7] flex-shrink-0">
                 <Mail className="w-5 h-5" />
               </div>
               <div className="overflow-hidden">
-                <div className="text-xs font-mono text-slate-400 uppercase tracking-wider">
+                <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
                   Email
                 </div>
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="text-sm font-semibold text-slate-100 hover:text-indigo-300 transition-colors truncate block"
+                  className="text-sm font-bold text-[var(--text-heading)] hover:text-[#ef98a7] transition-colors truncate block"
                 >
                   {contactInfo.email}
                 </a>
@@ -75,17 +75,17 @@ export default function Contact() {
             <button
               type="button"
               onClick={handleCopyEmail}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-indigo-950/60 hover:bg-indigo-900/70 border border-indigo-400/30 hover:border-indigo-300 text-indigo-200 transition-all flex-shrink-0"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-bold theme-badge hover:scale-105 transition-transform flex-shrink-0"
               aria-label="Copy email address"
             >
               {copiedEmail ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-emerald-400" />
-                  <span className="text-emerald-300">Copied</span>
+                  <Check className="w-3.5 h-3.5 text-[#ef98a7]" />
+                  <span className="text-[#ef98a7]">Copied</span>
                 </>
               ) : (
                 <>
-                  <Copy className="w-3.5 h-3.5 text-indigo-300" />
+                  <Copy className="w-3.5 h-3.5 text-[#ef98a7]" />
                   <span>Copy</span>
                 </>
               )}
@@ -93,18 +93,18 @@ export default function Contact() {
           </div>
 
           {/* Phone Card with Copy Feature */}
-          <div className="glass-card rounded-2xl p-5 flex items-center justify-between gap-4">
+          <div className="theme-card rounded-2xl p-5 flex items-center justify-between gap-4">
             <div className="flex items-center gap-3.5 overflow-hidden">
-              <div className="w-11 h-11 rounded-xl bg-indigo-950/80 border border-indigo-400/30 flex items-center justify-center text-sky-300 flex-shrink-0">
-                <Phone className="w-5 h-5" />
+              <div className="w-11 h-11 rounded-xl bg-[#f7bea9]/20 border border-[#f7bea9]/35 flex items-center justify-center text-[#f7bea9] flex-shrink-0">
+                <Phone className="w-5 h-5 text-[#ef98a7]" />
               </div>
               <div className="overflow-hidden">
-                <div className="text-xs font-mono text-slate-400 uppercase tracking-wider">
+                <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
                   Phone
                 </div>
                 <a
                   href={`tel:${contactInfo.phone}`}
-                  className="text-sm font-semibold text-slate-100 hover:text-sky-300 transition-colors truncate block font-mono"
+                  className="text-sm font-bold text-[var(--text-heading)] hover:text-[#ef98a7] transition-colors truncate block font-mono"
                 >
                   {contactInfo.phone}
                 </a>
@@ -114,17 +114,17 @@ export default function Contact() {
             <button
               type="button"
               onClick={handleCopyPhone}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-indigo-950/60 hover:bg-indigo-900/70 border border-indigo-400/30 hover:border-indigo-300 text-sky-200 transition-all flex-shrink-0"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-bold theme-badge hover:scale-105 transition-transform flex-shrink-0"
               aria-label="Copy phone number"
             >
               {copiedPhone ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-emerald-400" />
-                  <span className="text-emerald-300">Copied</span>
+                  <Check className="w-3.5 h-3.5 text-[#ef98a7]" />
+                  <span className="text-[#ef98a7]">Copied</span>
                 </>
               ) : (
                 <>
-                  <Copy className="w-3.5 h-3.5 text-sky-300" />
+                  <Copy className="w-3.5 h-3.5 text-[#ef98a7]" />
                   <span>Copy</span>
                 </>
               )}
@@ -136,32 +136,32 @@ export default function Contact() {
             href={contactInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass-card rounded-2xl p-5 flex items-center gap-3.5 group transition-all"
+            className="theme-card rounded-2xl p-5 flex items-center gap-3.5 group transition-all"
           >
-            <div className="w-11 h-11 rounded-xl bg-indigo-950/80 border border-indigo-400/30 flex items-center justify-center text-indigo-300 group-hover:border-indigo-300 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.25)] transition-all flex-shrink-0">
+            <div className="w-11 h-11 rounded-xl bg-[#807094]/15 border border-[#807094]/30 flex items-center justify-center text-[#807094] dark:text-[#f7bea9] group-hover:scale-105 transition-all flex-shrink-0">
               <Linkedin className="w-5 h-5" />
             </div>
             <div className="overflow-hidden">
-              <div className="text-xs font-mono text-slate-400 uppercase tracking-wider">
+              <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
                 LinkedIn
               </div>
-              <div className="text-sm font-semibold text-slate-100 group-hover:text-indigo-200 transition-colors truncate">
+              <div className="text-sm font-bold text-[var(--text-heading)] group-hover:text-[#ef98a7] transition-colors truncate">
                 linkedin.com/in/sabika-latif
               </div>
             </div>
           </a>
 
           {/* Location & Remote Availability Card */}
-          <div className="glass-card rounded-2xl p-5 flex items-center gap-3.5">
-            <div className="w-11 h-11 rounded-xl bg-indigo-950/80 border border-indigo-400/30 flex items-center justify-center text-purple-300 flex-shrink-0">
+          <div className="theme-card rounded-2xl p-5 flex items-center gap-3.5">
+            <div className="w-11 h-11 rounded-xl bg-[#604f71]/15 border border-[#604f71]/30 flex items-center justify-center text-[#604f71] dark:text-[#f7bea9] flex-shrink-0">
               <MapPin className="w-5 h-5" />
             </div>
             <div className="overflow-hidden">
-              <div className="text-xs font-mono text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+              <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold flex items-center gap-1.5">
                 <span>Location</span>
-                <span className="text-emerald-400 font-semibold">• Open to Remote</span>
+                <span className="text-[#ef98a7] dark:text-[#f7bea9] font-bold">• Open to Remote</span>
               </div>
-              <div className="text-sm font-semibold text-slate-100 truncate">
+              <div className="text-sm font-bold text-[var(--text-heading)] truncate">
                 {contactInfo.location}
               </div>
             </div>
@@ -173,7 +173,7 @@ export default function Contact() {
         <div className="mt-8 text-center">
           <a
             href={`mailto:${contactInfo.email}`}
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-indigo-300 via-sky-200 to-purple-300 hover:from-indigo-200 hover:to-purple-200 transition-all shadow-[0_0_25px_rgba(99,102,241,0.35)] hover:shadow-[0_0_35px_rgba(99,102,241,0.5)] transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-sm font-bold btn-palette-primary transform hover:-translate-y-0.5"
           >
             <Mail className="w-4 h-4" />
             <span>Send Direct Email</span>
