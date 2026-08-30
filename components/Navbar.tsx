@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { navItems, personalData } from "@/data/portfolioData";
-import { Menu, X, ShieldCheck, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,20 +60,64 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
-        {/* Brand Logo */}
+        {/* Brand Logo with Unique Custom QA Emblem */}
         <a
           href="#hero"
           className="flex items-center gap-3 group focus:outline-none"
           aria-label={`${personalData.name} - Home`}
         >
-          <div className="w-10 h-10 rounded-xl bg-[#58795e]/20 border border-[#94ca9d]/40 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] group-hover:scale-105 transition-all">
-            <ShieldCheck className="w-5 h-5 text-[#2c3c2f] dark:text-[#bafdc5]" />
+          {/* Custom QA Monogram Icon */}
+          <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#1d2c22] to-[#121c15] border border-[#94ca9d]/50 flex items-center justify-center shadow-md group-hover:scale-105 group-hover:border-[#bafdc5] transition-all overflow-hidden">
+            <svg
+              viewBox="0 0 40 40"
+              className="w-7 h-7"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Q Letter (Stylized Circle with Precision Checkmark) */}
+              <circle
+                cx="16"
+                cy="18"
+                r="10"
+                stroke="url(#qa-mint-grad)"
+                strokeWidth="2.75"
+                strokeLinecap="round"
+              />
+              <path
+                d="M21 23L26 28"
+                stroke="url(#qa-mint-grad)"
+                strokeWidth="2.75"
+                strokeLinecap="round"
+              />
+              {/* A Letter (Modern Architectural Chevron with Crossbar) */}
+              <path
+                d="M25 28L31 10L37 28"
+                stroke="#94ca9d"
+                strokeWidth="2.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M27.5 22.5H34.5"
+                stroke="#bafdc5"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+              />
+              {/* Gradients */}
+              <defs>
+                <linearGradient id="qa-mint-grad" x1="6" y1="8" x2="26" y2="28" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#bafdc5" />
+                  <stop offset="1" stopColor="#58795e" />
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
+
           <div className="flex flex-col">
             <span className="font-bold text-[var(--text-heading)] group-hover:text-[#58795e] dark:group-hover:text-[#bafdc5] transition-colors text-base sm:text-lg leading-tight">
               {personalData.name}
             </span>
-            <span className="text-xs font-mono text-[#58795e] dark:text-[#94ca9d] font-semibold">SQA Team Lead</span>
+            <span className="text-xs font-mono text-[#58795e] dark:text-[#94ca9d] font-semibold">SQA Engineer</span>
           </div>
         </a>
 

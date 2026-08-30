@@ -266,6 +266,28 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
+    id: "pronounce-spell-checker",
+    name: "Pronounce and Spell Checker AI",
+    category: "Language & Translation",
+    platform: "iOS",
+    role: "SQA Engineer (AI Speech & Privacy QA)",
+    description:
+      "An AI-powered language assistant offering smart spell-checking, phonetic breakdowns, accent training (US, UK, AUS), camera-based OCR text extraction, live voice translation, and interactive flashcards.",
+    testingFocus: [
+      "Validated core speech recognition (STT) and text-to-speech (TTS) playback quality, ensuring accurate pronunciation rendering and latency across diverse accents.",
+      "Executed end-to-end testing for OCR camera scanning, offline/online dictionary queries, and live two-way voice translation APIs using Postman.",
+      "Performed compatibility and compliance testing across iOS versions, validating App Tracking Transparency (ATT), GDPR consent flows, and in-app purchase subscriptions.",
+    ],
+    toolsUsed: ["Speech Recognition STT/TTS", "Postman APIs", "App Tracking Transparency (ATT)", "GDPR Consent", "JIRA", "GitLab"],
+    appStoreUrl: "https://apps.apple.com/us/app/pronounce-spell-checker-ai/id6739133471",
+    image: "/images/projects/pronounce-spell-checker/screen-1.webp",
+    screenshots: [
+      "/images/projects/pronounce-spell-checker/screen-1.webp",
+      "/images/projects/pronounce-spell-checker/screen-2.webp",
+      "/images/projects/pronounce-spell-checker/screen-3.webp",
+    ],
+  },
+  {
     id: "english-dictionary",
     name: "English Dictionary & Voice Translator",
     category: "Language & Translation",
@@ -538,29 +560,12 @@ export const projects: ProjectItem[] = [
     ],
     toolsUsed: ["Camera2 API Testing", "Hardware Sensor QA", "UI Responsiveness"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.truemirror.makeup.zoom.camera&hl=en",
-    image: "/images/projects/true-mirror/screen-1.jpg",
+    image: "/images/projects/true-mirror/mockup-1.jpg",
     screenshots: [
-      "/images/projects/true-mirror/screen-1.jpg",
-      "/images/projects/true-mirror/screen-2.jpg",
-      "/images/projects/true-mirror/screen-3.jpg",
+      "/images/projects/true-mirror/mockup-1.jpg",
+      "/images/projects/true-mirror/mockup-2.jpg",
+      "/images/projects/true-mirror/mockup-3.jpg",
     ],
-  },
-  {
-    id: "pronounce-spell-checker",
-    name: "Pronounce and Spell Checker AI",
-    category: "Language & Translation",
-    platform: "iOS",
-    role: "SQA Engineer (AI Speech & Privacy QA)",
-    description:
-      "An AI-powered language assistant offering smart spell-checking, phonetic breakdowns, accent training (US, UK, AUS), camera-based OCR text extraction, live voice translation, and interactive flashcards.",
-    testingFocus: [
-      "Validated core speech recognition (STT) and text-to-speech (TTS) playback quality, ensuring accurate pronunciation rendering and latency across diverse accents.",
-      "Executed end-to-end testing for OCR camera scanning, offline/online dictionary queries, and live two-way voice translation APIs using Postman.",
-      "Performed compatibility and compliance testing across iOS versions (including iOS 15+ retrofitting), validating App Tracking Transparency (ATT), GDPR consent flows, and in-app purchase subscriptions.",
-    ],
-    toolsUsed: ["Speech Recognition STT/TTS", "Postman APIs", "App Tracking Transparency (ATT)", "GDPR Consent", "JIRA", "GitLab"],
-    appStoreUrl: "https://apps.apple.com/us/app/pronounce-spell-checker-ai/id6739133471",
-    image: "/images/projects/pronounce-spell-checker.svg",
   },
 ];
 
@@ -621,5 +626,5 @@ export const contactInfo: ContactInfo = {
   linkedin: "https://www.linkedin.com/in/sabika-latif",
   github: "https://github.com/sabeeqalatif-byte",
   location: "Rawalpindi / Islamabad, Pakistan",
-  availability: "Open to Remote Opportunities (Worldwide)",
+  availability: "Open for New QA Positions & Remote Roles",
 };

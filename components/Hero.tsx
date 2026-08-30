@@ -1,13 +1,13 @@
 import React from "react";
 import { personalData } from "@/data/portfolioData";
-import { ArrowRight, Download, CheckCircle2, Smartphone, Terminal, Shield, Sparkles } from "lucide-react";
+import { ArrowRight, Download, CheckCircle2, Smartphone, Terminal, Sparkles, Shield } from "lucide-react";
 
 export default function Hero() {
   return (
     <section id="hero" className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden">
-      {/* Palette Ambient Background Glows */}
-      <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[380px] bg-[#bafdc5]/12 rounded-full blur-[120px] pointer-events-none -z-10" />
-      <div className="absolute top-1/3 right-1/4 w-[450px] h-[320px] bg-[#94ca9d]/12 rounded-full blur-[110px] pointer-events-none -z-10" />
+      {/* Soothing Ambient Background Glows */}
+      <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[400px] bg-[#bafdc5]/14 rounded-full blur-[130px] pointer-events-none -z-10 animate-pulse" />
+      <div className="absolute top-1/3 right-1/4 w-[500px] h-[340px] bg-[#94ca9d]/14 rounded-full blur-[120px] pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
@@ -15,10 +15,10 @@ export default function Hero() {
           {/* Left Column: Heading & Value Proposition */}
           <div className="lg:col-span-7 space-y-6">
             
-            {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold theme-badge shadow-sm">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#58795e] dark:bg-[#bafdc5] animate-pulse" />
-              <span>Available for SQA Team Lead &amp; Remote Roles</span>
+            {/* Status Pill - Updated to User's exact request */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold theme-badge shadow-sm">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#58795e] dark:bg-[#bafdc5] animate-ping" />
+              <span>Open for New QA Positions &amp; Remote Roles</span>
             </div>
 
             {/* Main Heading */}
@@ -27,13 +27,13 @@ export default function Hero() {
                 Hi, I'm <span className="palette-headline">{personalData.name}</span>
               </h1>
               <h2 className="text-xl sm:text-2xl font-bold text-[#58795e] dark:text-[#bafdc5] font-mono tracking-tight flex items-center gap-2">
-                <span>Software Quality Assurance Engineer | SQA Team Lead</span>
+                <span>Software Quality Assurance Engineer</span>
               </h2>
             </div>
 
             {/* Concise Introduction */}
             <p className="text-[var(--text-body)] text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              Results-driven SQA Team Lead and QA Engineer with <strong className="text-[var(--text-heading)] font-bold">2+ years of experience</strong> spearheading end-to-end testing for <strong className="text-[var(--text-heading)] font-bold">15+ live mobile applications</strong> on the Apple App Store &amp; Google Play Store. Skilled in building test automation with <strong className="text-[var(--text-heading)] font-bold">Antigravity</strong>, REST API validation in <strong className="text-[var(--text-heading)] font-bold">Postman</strong>, and managing defect lifecycles in <strong className="text-[var(--text-heading)] font-bold">JIRA &amp; GitLab</strong>.
+              Results-driven SQA Team Lead and Quality Assurance Engineer with <strong className="text-[var(--text-heading)] font-bold">2+ years of experience</strong> spearheading end-to-end testing for <strong className="text-[var(--text-heading)] font-bold">15+ live mobile applications</strong> on the Apple App Store &amp; Google Play Store. Skilled in building test automation with <strong className="text-[var(--text-heading)] font-bold">Antigravity</strong>, REST API validation in <strong className="text-[var(--text-heading)] font-bold">Postman</strong>, and managing defect lifecycles in <strong className="text-[var(--text-heading)] font-bold">JIRA &amp; GitLab</strong>.
             </p>
 
             {/* CTAs */}
@@ -90,33 +90,26 @@ export default function Hero() {
                 </span>
               </div>
 
-              {/* Verified Inspection Checklist */}
+              {/* Verified Inspection Checklist (Removed Compliance row as requested) */}
               <div className="space-y-3 font-mono text-xs">
                 <div className="flex items-start gap-2.5 p-3 rounded-xl theme-subtle-box">
                   <CheckCircle2 className="w-4 h-4 text-[#58795e] dark:text-[#bafdc5] flex-shrink-0 mt-0.5" />
                   <div className="text-[var(--text-body)]">
-                    <span className="text-[var(--text-heading)] font-bold">Mobile QA:</span> OCR Vision, Speech STT/TTS &amp; IAP
+                    <span className="text-[var(--text-heading)] font-bold">Mobile QA:</span> OCR Vision, Speech STT/TTS &amp; Store Purchases
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2.5 p-3 rounded-xl theme-subtle-box">
                   <CheckCircle2 className="w-4 h-4 text-[#58795e] dark:text-[#bafdc5] flex-shrink-0 mt-0.5" />
                   <div className="text-[var(--text-body)]">
-                    <span className="text-[var(--text-heading)] font-bold">REST API Checks:</span> Postman Status 200 OK &amp; Schema
+                    <span className="text-[var(--text-heading)] font-bold">REST API Checks:</span> Postman Status 200 OK &amp; Schema Integrity
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2.5 p-3 rounded-xl theme-subtle-box">
                   <CheckCircle2 className="w-4 h-4 text-[#58795e] dark:text-[#bafdc5] flex-shrink-0 mt-0.5" />
                   <div className="text-[var(--text-body)]">
-                    <span className="text-[var(--text-heading)] font-bold">Antigravity:</span> Multilingual Keyboards &amp; UI Tests
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-2.5 p-3 rounded-xl theme-subtle-box">
-                  <CheckCircle2 className="w-4 h-4 text-[#58795e] dark:text-[#bafdc5] flex-shrink-0 mt-0.5" />
-                  <div className="text-[var(--text-body)]">
-                    <span className="text-[var(--text-heading)] font-bold">Compliance:</span> iOS ATT, GDPR Consent &amp; Privacy
+                    <span className="text-[var(--text-heading)] font-bold">Antigravity:</span> Multilingual Keyboards &amp; Automated Regression
                   </div>
                 </div>
               </div>
