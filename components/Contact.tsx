@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { contactInfo } from "@/data/portfolioData";
-import { Mail, Github, Linkedin, MapPin, Copy, Check, Send } from "lucide-react";
+import { Mail, Linkedin, MapPin, Copy, Check, Send } from "lucide-react";
 
 export default function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -37,11 +37,11 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Contact Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Contact Cards Grid: 3 Clean Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           
           {/* Email Card with Copy Feature */}
-          <div className="theme-card rounded-2xl p-5 flex items-center justify-between gap-4">
+          <div className="theme-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
             <div className="flex items-center gap-3.5 overflow-hidden">
               <div className="w-11 h-11 rounded-xl bg-[#58795e]/15 border border-[#94ca9d]/30 flex items-center justify-center text-[#58795e] dark:text-[#bafdc5] flex-shrink-0">
                 <Mail className="w-5 h-5" />
@@ -52,86 +52,83 @@ export default function Contact() {
                 </div>
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="text-sm font-bold text-[var(--text-heading)] hover:text-[#58795e] dark:hover:text-[#bafdc5] transition-colors truncate block"
+                  className="text-xs sm:text-sm font-bold text-[var(--text-heading)] hover:text-[#58795e] dark:hover:text-[#bafdc5] transition-colors truncate block"
                 >
                   {contactInfo.email}
                 </a>
               </div>
             </div>
 
-            <button
-              type="button"
-              onClick={handleCopyEmail}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-bold theme-badge hover:scale-105 transition-transform flex-shrink-0"
-              aria-label="Copy email address"
-            >
-              {copiedEmail ? (
-                <>
-                  <Check className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
-                  <span className="text-[#58795e] dark:text-[#bafdc5]">Copied</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
-                  <span>Copy</span>
-                </>
-              )}
-            </button>
+            <div className="pt-2 border-t border-[var(--border-color)]">
+              <button
+                type="button"
+                onClick={handleCopyEmail}
+                className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-bold theme-badge hover:scale-[1.02] transition-transform"
+                aria-label="Copy email address"
+              >
+                {copiedEmail ? (
+                  <>
+                    <Check className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
+                    <span className="text-[#58795e] dark:text-[#bafdc5]">Copied</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
+                    <span>Copy Address</span>
+                  </>
+                )}
+              </button>
+            </div>
           </div>
-
-          {/* GitHub Card */}
-          <a
-            href={contactInfo.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="theme-card rounded-2xl p-5 flex items-center gap-3.5 group transition-all"
-          >
-            <div className="w-11 h-11 rounded-xl bg-[#bafdc5]/20 border border-[#94ca9d]/35 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] group-hover:scale-105 transition-all flex-shrink-0">
-              <Github className="w-5 h-5 text-[#58795e] dark:text-[#bafdc5]" />
-            </div>
-            <div className="overflow-hidden">
-              <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
-                GitHub
-              </div>
-              <div className="text-sm font-bold text-[var(--text-heading)] group-hover:text-[#58795e] dark:group-hover:text-[#bafdc5] transition-colors truncate">
-                github.com/sabeeqalatif-byte
-              </div>
-            </div>
-          </a>
 
           {/* LinkedIn Card */}
           <a
             href={contactInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="theme-card rounded-2xl p-5 flex items-center gap-3.5 group transition-all"
+            className="theme-card rounded-2xl p-5 flex flex-col justify-between space-y-4 group transition-all"
           >
-            <div className="w-11 h-11 rounded-xl bg-[#94ca9d]/20 border border-[#94ca9d]/35 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] group-hover:scale-105 transition-all flex-shrink-0">
-              <Linkedin className="w-5 h-5" />
+            <div className="flex items-center gap-3.5 overflow-hidden">
+              <div className="w-11 h-11 rounded-xl bg-[#94ca9d]/20 border border-[#94ca9d]/35 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] group-hover:scale-105 transition-all flex-shrink-0">
+                <Linkedin className="w-5 h-5" />
+              </div>
+              <div className="overflow-hidden">
+                <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
+                  LinkedIn
+                </div>
+                <div className="text-xs sm:text-sm font-bold text-[var(--text-heading)] group-hover:text-[#58795e] dark:group-hover:text-[#bafdc5] transition-colors truncate">
+                  in/sabika-latif
+                </div>
+              </div>
             </div>
-            <div className="overflow-hidden">
-              <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
-                LinkedIn
-              </div>
-              <div className="text-sm font-bold text-[var(--text-heading)] group-hover:text-[#58795e] dark:group-hover:text-[#bafdc5] transition-colors truncate">
-                linkedin.com/in/sabika-latif
-              </div>
+
+            <div className="pt-2 border-t border-[var(--border-color)]">
+              <span className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-bold theme-badge group-hover:scale-[1.02] transition-transform">
+                <span>View Profile</span>
+              </span>
             </div>
           </a>
 
           {/* Location & Remote Availability Card */}
-          <div className="theme-card rounded-2xl p-5 flex items-center gap-3.5">
-            <div className="w-11 h-11 rounded-xl bg-[#2c3c2f]/15 border border-[#94ca9d]/30 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] flex-shrink-0">
-              <MapPin className="w-5 h-5" />
+          <div className="theme-card rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div className="flex items-center gap-3.5 overflow-hidden">
+              <div className="w-11 h-11 rounded-xl bg-[#2c3c2f]/15 border border-[#94ca9d]/30 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] flex-shrink-0">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <div className="overflow-hidden">
+                <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
+                  Location
+                </div>
+                <div className="text-xs sm:text-sm font-bold text-[var(--text-heading)] truncate">
+                  {contactInfo.location}
+                </div>
+              </div>
             </div>
-            <div className="overflow-hidden">
-              <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold flex items-center gap-1.5">
-                <span>Location</span>
-                <span className="text-[#58795e] dark:text-[#bafdc5] font-bold">• Open to Remote</span>
-              </div>
-              <div className="text-sm font-bold text-[var(--text-heading)] truncate">
-                {contactInfo.location}
-              </div>
+
+            <div className="pt-2 border-t border-[var(--border-color)]">
+              <span className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-bold theme-badge text-[#2c3c2f] dark:text-[#bafdc5]">
+                <span>Open to Remote Roles</span>
+              </span>
             </div>
           </div>
 

@@ -60,7 +60,7 @@ export interface ContactInfo {
   phone?: string;
   email: string;
   linkedin: string;
-  github: string;
+  github?: string;
   location: string;
   availability: string;
 }
@@ -657,7 +657,6 @@ export const expertiseAreas: ExpertiseArea[] = [
 export const contactInfo: ContactInfo = {
   email: "sabikalatif2@gmail.com",
   linkedin: "https://www.linkedin.com/in/sabika-latif",
-  github: "https://github.com/sabeeqalatif-byte",
   location: "Rawalpindi / Islamabad, Pakistan",
   availability: "Open for New QA Positions & Remote Roles",
 };
