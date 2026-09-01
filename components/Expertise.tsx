@@ -17,29 +17,29 @@ export default function Expertise() {
   };
 
   return (
-    <section id="expertise" className="py-20 relative">
+    <section id="expertise" className="py-12 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold theme-badge">
+        <div className="text-center max-w-3xl mx-auto mb-8 space-y-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold theme-badge">
             <CheckSquare className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
             <span>Core Disciplines</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-heading)]">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-heading)]">
             QA Testing Expertise
           </h2>
-          <p className="text-[var(--text-body)] text-sm sm:text-base leading-relaxed">
-            Specialized QA domains covering end-to-end verification, platform compatibility, API health, and testing lifecycle management.
+          <p className="text-[var(--text-body)] text-xs sm:text-sm">
+            Specialized QA domains covering platform compatibility, API health, and automated quality gates.
           </p>
         </div>
 
         {/* 4-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {expertiseAreas.map((area, idx) => (
             <div
               key={area.title}
-              className="theme-card rounded-2xl p-6 flex flex-col justify-between space-y-4"
+              className="theme-card rounded-xl p-4 flex flex-col justify-between space-y-3"
             >
               <div className="space-y-3">
                 {/* Icon & Title */}

@@ -41,8 +41,10 @@ export interface ExpertiseArea {
 
 export interface EducationItem {
   degree: string;
+  major: string;
   institution: string;
   location: string;
+  graduationYear: string;
   period: string;
 }
 
@@ -85,6 +87,7 @@ export const navItems: NavItem[] = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Projects", href: "#projects" },
   { label: "Expertise", href: "#expertise" },
   { label: "Contact", href: "#contact" },
@@ -94,17 +97,16 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Testing Methodologies",
     skills: [
-      "Manual Testing",
+      "Manual QA",
       "Functional Testing",
       "Regression Testing",
-      "Exploratory Testing",
-      "UI/UX Testing",
-      "Mobile Testing (Android & iOS)",
-      "Cross-Platform Testing",
-      "Test Case Design & Planning",
+      "Exploratory QA",
+      "UI/UX Verification",
+      "Mobile QA (Android & iOS)",
+      "Test Plan & Case Design",
       "Defect Lifecycle Management",
       "App Store & Play Store IAP Audits",
-      "Privacy & ATT / GDPR Compliance",
+      "ATT & GDPR Compliance",
     ],
   },
   {
@@ -112,33 +114,31 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       "REST API Testing",
       "Postman",
-      "Payload Schema Validation",
-      "Status Code Verification",
-      "SQLite",
+      "JSON Schema Validation",
+      "Status Code Checks",
+      "SQLite Database",
       "SQL Data Validation",
     ],
   },
   {
     title: "Automation & Frameworks",
     skills: [
-      "Antigravity Framework",
-      "Test Automation Scripts",
-      "UI Workflow Automation",
-      "CI/CD Testing Workflows",
+      "Antigravity Automation",
+      "Automated Test Suites",
+      "UI Workflow Scripts",
+      "CI/CD Testing Integration",
     ],
   },
   {
-    title: "Tools, Languages & Development",
+    title: "Tools & Development",
     skills: [
       "JIRA",
       "GitLab",
       "Git",
       "Flutter & Dart",
       "Android Studio",
-      "Xcode & iOS Simulator",
-      "TestFlight",
-      "Agile / Scrum",
-      "Team Leadership & Mentorship",
+      "Xcode / TestFlight",
+      "Agile / Scrum Leadership",
     ],
   },
 ];
@@ -151,12 +151,11 @@ export const experiences: ExperienceItem[] = [
     location: "Islamabad, Pakistan",
     period: "10/2024 – Present",
     responsibilities: [
-      "Lead end-to-end QA operations across Android, iOS, and web platforms, managing test planning, defect lifecycles via JIRA/GitLab, and team mentorship to ensure reliable releases.",
-      "Developed automated test suites using the Antigravity framework to streamline application workflows and significantly reduce manual regression time.",
-      "Spearheaded QA releases for 15+ live applications on the Apple App Store and Google Play Store.",
-      "Conducted sprint test reviews, defect triage, and cross-functional syncs with product and engineering teams.",
+      "Lead end-to-end QA across iOS, Android, and Web platforms, managing test planning and defect triage in JIRA/GitLab.",
+      "Developed automated regression suites with Antigravity framework, cutting regression cycle execution time.",
+      "Spearheaded QA sign-offs for 15+ live mobile apps published on the Apple App Store and Google Play Store.",
     ],
-    skills: ["Antigravity Automation", "Android & iOS QA", "JIRA", "GitLab", "Team Leadership", "CI/CD"],
+    skills: ["Antigravity Automation", "iOS & Android QA", "JIRA", "GitLab", "CI/CD", "Team Leadership"],
   },
   {
     id: "exp-2",
@@ -165,11 +164,11 @@ export const experiences: ExperienceItem[] = [
     location: "Islamabad, Pakistan",
     period: "05/2024 – 10/2024",
     responsibilities: [
-      "Authored and executed structured test plans, scenarios, and bug reports across native Android and iOS apps, performing functional, regression, UI/UX, and Postman API testing.",
-      "Tracked and prioritized defect lifecycles via JIRA and GitLab, analyzing quality metrics and collaborating with cross-functional teams to streamline sprint releases.",
-      "Conducted edge-case exploratory testing and validated in-app subscription and monetization flows.",
+      "Authored structured test cases and performed functional, regression, UI/UX, and Postman API testing.",
+      "Validated camera OCR parsing, speech-to-text audio streams, and in-app purchase monetization flows.",
+      "Tracked and prioritized high-severity defects in JIRA and GitLab for sprint release cycles.",
     ],
-    skills: ["Test Plans & Scenarios", "Postman", "Mobile Testing", "JIRA", "GitLab", "Regression Testing"],
+    skills: ["Test Plans & Scenarios", "Postman", "Mobile QA", "JIRA", "GitLab", "Regression Testing"],
   },
   {
     id: "exp-3",
@@ -178,10 +177,10 @@ export const experiences: ExperienceItem[] = [
     location: "Remote",
     period: "11/2023 – 04/2024",
     responsibilities: [
-      "Developed and maintained responsive cross-platform mobile applications for Android and iOS using Flutter and Dart, integrating RESTful APIs for seamless backend synchronization.",
-      "Collaborated with UI/UX designers and backend engineers to optimize app performance, resolve critical bugs, and deliver stable, high-quality releases.",
+      "Developed cross-platform mobile apps for Android and iOS using Flutter and Dart with RESTful API backend integrations.",
+      "Collaborated with designers and engineers to optimize app performance and resolve cross-platform UI defects.",
     ],
-    skills: ["Flutter", "Dart", "RESTful APIs", "Mobile Architecture", "Bug Resolution"],
+    skills: ["Flutter", "Dart", "RESTful APIs", "State Management", "Bug Fixing"],
   },
   {
     id: "exp-4",
@@ -190,10 +189,10 @@ export const experiences: ExperienceItem[] = [
     location: "Remote",
     period: "08/2023 – 10/2023",
     responsibilities: [
-      "Participated in architectural discussions, requirements gathering, and rapid prototyping for multi-tier client software solutions.",
-      "Contributed to core feature implementation, routine debugging, and baseline functional testing to guarantee code stability prior to staging deployments.",
+      "Participated in requirements gathering, architectural design, and rapid prototyping for client solutions.",
+      "Contributed to core feature implementation, debugging, and baseline functional verification.",
     ],
-    skills: ["Prototyping", "Functional Testing", "Debugging", "Software Architecture"],
+    skills: ["Prototyping", "Functional QA", "Debugging", "Software Design"],
   },
   {
     id: "exp-5",
@@ -202,9 +201,8 @@ export const experiences: ExperienceItem[] = [
     location: "Islamabad, Pakistan",
     period: "02/2023 – 07/2023",
     responsibilities: [
-      "Supported instructors for Social Media Marketing and Technical Writing courses during on-site classes.",
-      "Reviewed and graded student projects, quizzes, and writing tasks with clear feedback.",
-      "Helped students understand core marketing strategies and professional writing concepts during office hours.",
+      "Assisted instructors in Social Media Marketing and Technical Writing course instruction.",
+      "Graded technical assignments and student projects, providing constructive quality feedback.",
     ],
     skills: ["Technical Writing", "Academic Mentorship", "Communication"],
   },
@@ -212,9 +210,11 @@ export const experiences: ExperienceItem[] = [
 
 export const educationData: EducationItem[] = [
   {
-    degree: "Bachelor's of Science in Software Engineering",
+    degree: "Bachelor of Science",
+    major: "Software Engineering (BS SE)",
     institution: "International Islamic University",
     location: "Islamabad, Pakistan",
+    graduationYear: "2022",
     period: "2018 – 2022",
   },
 ];

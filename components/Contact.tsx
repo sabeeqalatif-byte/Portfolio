@@ -33,20 +33,20 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 relative">
+    <section id="contact" className="py-12 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold theme-badge">
+        <div className="text-center max-w-3xl mx-auto mb-8 space-y-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold theme-badge">
             <Send className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
             <span>Connect</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-heading)]">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-heading)]">
             Get in Touch
           </h2>
-          <p className="text-[var(--text-body)] text-sm sm:text-base leading-relaxed">
-            Interested in discussing an SQA Team Lead or Senior QA Engineer opportunity? Let's connect directly.
+          <p className="text-[var(--text-body)] text-xs sm:text-sm">
+            Open for new SQA positions, team lead roles, and remote opportunities.
           </p>
         </div>
 

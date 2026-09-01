@@ -212,25 +212,25 @@ export default function Projects() {
   });
 
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-12 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold theme-badge">
+        <div className="text-center max-w-3xl mx-auto mb-6 space-y-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold theme-badge">
             <FolderGit2 className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
             <span>15+ Live Mobile Applications</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-heading)]">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-heading)]">
             Verified Store Projects
           </h2>
-          <p className="text-[var(--text-body)] text-sm sm:text-base leading-relaxed">
-            Real-world mobile apps tested and verified on the Apple App Store &amp; Google Play Store, covering AI OCR vision, STT/TTS voice synthesis, Antigravity automation, and iOS compliance.
+          <p className="text-[var(--text-body)] text-xs sm:text-sm">
+            Live mobile apps tested and verified on the Apple App Store &amp; Google Play Store.
           </p>
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 mb-8">
           {filterOptions.map((opt) => {
             const isSelected = selectedFilter === opt.label || (selectedFilter === "All" && opt.label === "All Apps");
             return (
@@ -238,7 +238,7 @@ export default function Projects() {
                 key={opt.label}
                 type="button"
                 onClick={() => setSelectedFilter(opt.label)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-mono transition-all duration-200 flex items-center gap-1.5 ${
+                className={`px-3 py-1 rounded-lg text-xs font-mono transition-all duration-200 flex items-center gap-1.5 ${
                   isSelected
                     ? "btn-palette-primary scale-105"
                     : "theme-card text-[var(--text-body)] hover:text-[#58795e] dark:hover:text-[#bafdc5] font-semibold"
@@ -254,7 +254,7 @@ export default function Projects() {
         </div>
 
         {/* Projects 2-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

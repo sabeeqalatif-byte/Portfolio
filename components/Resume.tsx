@@ -4,23 +4,23 @@ import { FileText, Download, ExternalLink, CheckCircle } from "lucide-react";
 
 export default function Resume() {
   return (
-    <section id="resume" className="py-20 relative">
+    <section id="resume" className="py-12 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
-        <div className="theme-card rounded-3xl p-8 sm:p-10 relative overflow-hidden border border-[var(--border-color)] text-center space-y-6 shadow-xl">
+        <div className="theme-card rounded-2xl p-6 sm:p-8 relative overflow-hidden border border-[var(--border-color)] text-center space-y-4 shadow-lg">
           
           {/* Icon Badge */}
-          <div className="w-14 h-14 mx-auto rounded-2xl bg-[#58795e]/15 border border-[#94ca9d]/35 flex items-center justify-center text-[#58795e] dark:text-[#bafdc5] shadow-sm">
-            <FileText className="w-7 h-7 text-[#58795e] dark:text-[#bafdc5]" />
+          <div className="w-11 h-11 mx-auto rounded-xl bg-[#58795e]/15 border border-[#94ca9d]/35 flex items-center justify-center text-[#58795e] dark:text-[#bafdc5] shadow-sm">
+            <FileText className="w-5 h-5 text-[#58795e] dark:text-[#bafdc5]" />
           </div>
 
           {/* Header */}
-          <div className="space-y-2 max-w-xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-heading)]">
+          <div className="space-y-1.5 max-w-xl mx-auto">
+            <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-[var(--text-heading)]">
               Curriculum Vitae / Resume
             </h2>
-            <p className="text-[var(--text-body)] text-sm leading-relaxed">
-              Explore my technical proficiencies, mobile QA testing history, and qualifications as a Software Quality Assurance Engineer &amp; Team Lead.
+            <p className="text-[var(--text-body)] text-xs sm:text-sm">
+              Verified qualifications and testing history across 15+ live mobile applications.
             </p>
           </div>
 
