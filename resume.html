@@ -15,7 +15,7 @@
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #111827;
+      color: #1f2937;
       background-color: #ffffff;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
@@ -25,159 +25,95 @@
     .page {
       width: 210mm;
       height: 297mm;
-      padding: 24mm 20mm;
+      padding: 16mm 18mm;
       page-break-after: always;
       position: relative;
       background: #ffffff;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .page:last-child {
       page-break-after: avoid;
     }
 
-    /* 2-Column Grid Layout */
-    .grid-container {
-      display: grid;
-      grid-template-columns: 54mm 104mm;
-      gap: 12mm;
-      height: 100%;
-    }
-
-    /* Left Sidebar */
-    .left-col {
+    /* Content container */
+    .content-flow {
       display: flex;
       flex-direction: column;
-      gap: 7mm;
+      gap: 3.8mm;
     }
 
-    /* Right Main Column */
-    .right-col {
-      display: flex;
-      flex-direction: column;
-      gap: 6mm;
+    /* Top Header */
+    .header-block {
+      text-align: center;
+      border-bottom: 1.2px solid #e5e7eb;
+      padding-bottom: 3.5mm;
+      margin-bottom: 1mm;
     }
-
-    /* Section Header with Black Square Icon */
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 2.5mm;
-      margin-bottom: 3mm;
+    .name-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: 1.2px;
+      margin-bottom: 1mm;
+      text-transform: uppercase;
     }
-    .section-icon {
-      width: 5.5mm;
-      height: 5.5mm;
-      background: #000000;
-      border-radius: 1mm;
+    .role-subtitle {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #2d7d52;
+      margin-bottom: 2mm;
+      letter-spacing: 0.4px;
+    }
+    .contact-bar {
       display: flex;
-      align-items: center;
       justify-content: center;
-      color: #ffffff;
-      font-size: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3mm;
+      font-size: 8.5px;
+      color: #4b5563;
     }
-    .section-icon svg {
-      width: 3mm;
-      height: 3mm;
-      fill: #ffffff;
+    .contact-bar a {
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 600;
     }
+    .contact-bar a:hover {
+      text-decoration: underline;
+    }
+    .contact-dot {
+      color: #9ca3af;
+    }
+
+    /* Section Headers */
     .section-title {
       font-size: 10.5px;
       font-weight: 800;
-      color: #000000;
+      color: #111827;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-    }
-
-    /* Header Banner (Monochrome Black & White) */
-    .name-title {
-      font-size: 26px;
-      font-weight: 800;
-      color: #000000;
-      letter-spacing: 1.5px;
-      margin-bottom: 2.5mm;
-      line-height: 1;
-    }
-    .role-badge {
-      background-color: #f3f4f6;
-      color: #000000;
-      border: 1px solid #d1d5db;
-      font-size: 9.5px;
-      font-weight: 800;
-      padding: 5px 10px;
-      border-radius: 3px;
-      letter-spacing: 0.6px;
-      display: inline-block;
-      width: 100%;
-      text-transform: uppercase;
-    }
-
-    /* Contacts */
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 2.5mm;
-      font-size: 9px;
-      color: #1f2937;
+      border-bottom: 1.2px solid #2d7d52;
+      padding-bottom: 1mm;
       margin-bottom: 2mm;
-      line-height: 1.3;
-    }
-    .contact-icon {
-      width: 3.5mm;
-      height: 3.5mm;
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .contact-icon svg {
-      width: 3.2mm;
-      height: 3.2mm;
-      fill: #111827;
-    }
-    .contact-item a {
-      color: #1f2937;
-      text-decoration: none;
-    }
-
-    /* Languages */
-    .lang-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 9px;
-      font-weight: 700;
-      color: #000000;
-    }
-    .lang-level {
-      font-size: 8.5px;
-      font-weight: 400;
-      color: #4b5563;
-    }
-
-    /* Skills List */
-    .skills-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.8mm;
-    }
-    .skills-list li {
-      font-size: 8.5px;
-      color: #1f2937;
-      line-height: 1.35;
+      gap: 2mm;
     }
 
     /* Summary */
     .summary-text {
-      font-size: 8.8px;
-      color: #1f2937;
+      font-size: 8.5px;
+      color: #374151;
       line-height: 1.5;
       text-align: justify;
     }
 
     /* Experience Items */
     .exp-item {
-      margin-bottom: 4mm;
+      margin-bottom: 2.8mm;
     }
     .exp-item:last-child {
       margin-bottom: 0;
@@ -186,399 +122,344 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 800;
-      color: #000000;
+      color: #111827;
     }
     .exp-location {
       font-size: 8.5px;
-      font-weight: 400;
-      color: #4b5563;
+      font-weight: 500;
+      color: #6b7280;
     }
     .exp-header-row2 {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 9px;
+      font-size: 8.8px;
       font-weight: 700;
-      color: #000000;
-      margin-top: 0.5mm;
-      margin-bottom: 1.5mm;
+      color: #2d7d52;
+      margin-top: 0.4mm;
+      margin-bottom: 1mm;
     }
     .exp-date {
-      font-size: 8.5px;
-      font-weight: 400;
-      color: #4b5563;
+      font-size: 8.2px;
+      font-weight: 500;
+      color: #6b7280;
     }
     .bullets {
       list-style: none;
       padding-left: 0;
       display: flex;
       flex-direction: column;
-      gap: 1.2mm;
+      gap: 1mm;
     }
     .bullets li {
       position: relative;
       padding-left: 3.5mm;
-      font-size: 8.5px;
-      color: #1f2937;
-      line-height: 1.45;
+      font-size: 8.3px;
+      color: #374151;
+      line-height: 1.4;
     }
     .bullets li::before {
       content: "•";
       position: absolute;
       left: 0;
       top: 0;
-      color: #000000;
-      font-size: 10px;
+      color: #2d7d52;
+      font-size: 9.5px;
       line-height: 1;
     }
 
-    /* Education Items */
+    /* Education Item */
     .edu-item {
-      margin-bottom: 3mm;
+      margin-bottom: 1.5mm;
     }
     .edu-header-row1 {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 800;
-      color: #000000;
+      color: #111827;
     }
     .edu-header-row2 {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 9px;
-      color: #1f2937;
-      margin-top: 0.5mm;
+      font-size: 8.8px;
+      color: #374151;
+      margin-top: 0.4mm;
+    }
+
+    /* Categorized Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5mm;
+      font-size: 8.3px;
+      color: #374151;
+      line-height: 1.4;
+    }
+    .skill-cat {
+      font-weight: 700;
+      color: #111827;
+    }
+
+    /* Footer text */
+    .page-footer {
+      font-size: 7.5px;
+      color: #9ca3af;
+      text-align: right;
+      border-top: 0.8px solid #f3f4f6;
+      padding-top: 1.5mm;
+      margin-top: 1.5mm;
     }
   </style>
 </head>
 <body>
 
-  <!-- ==================== PAGE 1 (PURE BLACK & WHITE) ==================== -->
+  <!-- ==================== PAGE 1 ==================== -->
   <div class="page">
-    <div class="grid-container">
+    <div class="content-flow">
       
-      <!-- LEFT SIDEBAR -->
-      <div class="left-col">
-        
-        <!-- CONTACTS -->
-        <div>
-          <div class="section-header">
-            <div class="section-icon">
-              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </div>
-            <div class="section-title">Contacts</div>
+      <!-- HEADER -->
+      <div class="header-block">
+        <h1 class="name-title">Sabika Latif</h1>
+        <div class="role-subtitle">Software Quality Assurance Engineer | SQA Team Lead</div>
+        <div class="contact-bar">
+          <span>+92 309 5945909</span>
+          <span class="contact-dot">•</span>
+          <a href="mailto:Sabikalatif2@gmail.com">Sabikalatif2@gmail.com</a>
+          <span class="contact-dot">•</span>
+          <a href="https://sabeeqalatif-byte.github.io/Portfolio" target="_blank">Portfolio</a>
+          <span class="contact-dot">•</span>
+          <a href="https://www.linkedin.com/in/sabika-latif" target="_blank">LinkedIn</a>
+          <span class="contact-dot">•</span>
+          <span>Rawalpindi / Islamabad, Pakistan</span>
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div>
+        <div class="section-title">Summary</div>
+        <p class="summary-text">
+          Results-driven SQA Team Lead and Quality Assurance Engineer with 2+ years of experience spearheading end-to-end testing across Android, iOS, and web platforms. Skilled in building test automation frameworks using Antigravity and executing comprehensive manual, API, and UI testing with tools like JIRA, GitLab, and Postman. Proven track record of leading QA initiatives, streamlining CI/CD testing workflows, mentoring teams, and ensuring high-standard product releases in fast-paced Agile environments.
+        </p>
+      </div>
+
+      <!-- WORK EXPERIENCE -->
+      <div>
+        <div class="section-title">Experience</div>
+
+        <!-- Job 1 -->
+        <div class="exp-item">
+          <div class="exp-header-row1">
+            <span>Zeesofttech</span>
+            <span class="exp-location">Islamabad, Pakistan</span>
           </div>
-          <div class="contact-item">
-            <span class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            </span>
-            <span>+923095945909</span>
+          <div class="exp-header-row2">
+            <span>SQA Team Lead | Senior SQA Engineer</span>
+            <span class="exp-date">10/2024 – Present</span>
           </div>
-          <div class="contact-item">
-            <span class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </span>
-            <span>Sabikalatif2@gmail.com</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-            </span>
-            <span>Sabika Latif</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            </span>
-            <span>Rawalpindi</span>
-          </div>
+          <ul class="bullets">
+            <li>Lead end-to-end QA operations across Android, iOS, and web platforms, managing test planning, defect lifecycles via JIRA/GitLab, and team mentorship to ensure reliable releases.</li>
+            <li>Developed automated test suites using the Antigravity framework to streamline application workflows and significantly reduce manual regression time.</li>
+          </ul>
         </div>
 
-        <!-- LANGUAGES -->
-        <div>
-          <div class="section-header">
-            <div class="section-icon">
-              <svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.08c1.74-1.94 2.98-4.17 3.71-6.49H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-            </div>
-            <div class="section-title">Languages</div>
+        <!-- Job 2 -->
+        <div class="exp-item">
+          <div class="exp-header-row1">
+            <span>Zeesofttech</span>
+            <span class="exp-location">Islamabad, Pakistan</span>
           </div>
-          <div class="lang-row">
-            <span>ENGLISH</span>
-            <span class="lang-level">Proficient</span>
+          <div class="exp-header-row2">
+            <span>Software Quality Assurance Engineer Intern</span>
+            <span class="exp-date">05/2024 – 10/2024</span>
           </div>
+          <ul class="bullets">
+            <li>Authored and executed structured test plans, scenarios, and bug reports across native Android and iOS apps, performing functional, regression, UI/UX, and Postman API testing.</li>
+            <li>Tracked and prioritized defect lifecycles via JIRA and GitLab, analyzing quality metrics and collaborating with cross-functional teams to streamline sprint releases.</li>
+          </ul>
         </div>
 
-        <!-- SKILLS -->
-        <div>
-          <div class="section-header">
-            <div class="section-icon">
-              <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
-            </div>
-            <div class="section-title">Skills</div>
+        <!-- Job 3 -->
+        <div class="exp-item">
+          <div class="exp-header-row1">
+            <span>Terasharp</span>
+            <span class="exp-location">Remote</span>
           </div>
-          <ul class="skills-list">
-            <li>Software Quality Assurance</li>
-            <li>Software Testing · JIRA · TestRail</li>
-            <li>GitLab</li>
-            <li>Test Case Writing and Execution</li>
-            <li>GitHub · Function Testing</li>
-            <li>Nonfunctional Testing · Regression</li>
-            <li>Robo Testing · Python · Sanity</li>
-            <li>Smoke Testing</li>
-            <li>User Acceptance Testing</li>
-            <li>System Testing · Retesting · SDLC</li>
-            <li>STLC · Testing Techniques · Flutter</li>
-            <li>Sourcetree · Excel · Postman · SQL</li>
+          <div class="exp-header-row2">
+            <span>Cross-Platform Mobile Application Developer</span>
+            <span class="exp-date">11/2023 – 04/2024</span>
+          </div>
+          <ul class="bullets">
+            <li>Developed and maintained responsive cross-platform mobile applications for Android and iOS using Flutter and Dart, integrating RESTful APIs for seamless backend synchronization.</li>
+            <li>Collaborated with UI/UX designers and backend engineers to optimize app performance, resolve critical bugs, and deliver stable, high-quality releases.</li>
+          </ul>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="exp-item">
+          <div class="exp-header-row1">
+            <span>Terasharp</span>
+            <span class="exp-location">Remote</span>
+          </div>
+          <div class="exp-header-row2">
+            <span>Software Design & Engineering Intern</span>
+            <span class="exp-date">08/2023 – 10/2023</span>
+          </div>
+          <ul class="bullets">
+            <li>Participated in architectural discussions, requirements gathering, and rapid prototyping for multi-tier client software solutions.</li>
+            <li>Contributed to core feature implementation, routine debugging, and baseline functional testing to guarantee code stability prior to staging deployments.</li>
           </ul>
         </div>
 
       </div>
 
-      <!-- RIGHT MAIN COLUMN -->
-      <div class="right-col">
-        
-        <!-- HEADER BLOCK -->
-        <div>
-          <h1 class="name-title">SABIKA</h1>
-          <div class="role-badge">
-            SOFTWARE QUALITY ASSURANCE ENGINEER | TEAM LEAD
+      <!-- EDUCATION -->
+      <div>
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+          <div class="edu-header-row1">
+            <span>International Islamic University</span>
+            <span class="exp-location">Islamabad, Pakistan</span>
+          </div>
+          <div class="edu-header-row2">
+            <span>Bachelor of Science in Software Engineering (BS SE)</span>
+            <span class="exp-date">2018 – 2022</span>
           </div>
         </div>
+      </div>
 
-        <!-- SUMMARY -->
-        <div>
-          <div class="section-header">
-            <div class="section-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-            </div>
-            <div class="section-title">Summary</div>
-          </div>
-          <p class="summary-text">
-            Results-driven SQA Team Lead and Quality Assurance Engineer with 2+ years of experience spearheading end-to-end testing across Android, iOS, and web platforms. Skilled in building test automation frameworks using Antigravity and executing comprehensive manual, API, and UI testing with tools like JIRA, GitLab, and Postman. Proven track record of leading QA initiatives, streamlining CI/CD testing workflows, mentoring teams, and ensuring high-standard product releases in fast-paced Agile environments.
-          </p>
+      <!-- CORE SKILLS -->
+      <div>
+        <div class="section-title">Technical Skills & Toolset</div>
+        <div class="skills-grid">
+          <div><span class="skill-cat">Testing Methodologies:</span> Software Quality Assurance, Functional Testing, Regression Testing, Non-functional Testing, System Testing, Retesting, User Acceptance Testing (UAT), Sanity & Smoke Testing, SDLC & STLC.</div>
+          <div><span class="skill-cat">Mobile QA & Automation:</span> Mobile Testing (iOS & Android), Antigravity Test Automation Framework, In-App Purchases (IAP) Audits, Robo Testing, Python, Flutter & Dart.</div>
+          <div><span class="skill-cat">API & Defect Management:</span> REST API Testing, Postman, JIRA, TestRail, GitLab, GitHub, Sourcetree, SQL, SQLite Database, Microsoft Excel.</div>
         </div>
-
-        <!-- EXPERIENCE -->
-        <div>
-          <div class="section-header">
-            <div class="section-icon">
-              <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
-            </div>
-            <div class="section-title">Experience</div>
-          </div>
-
-          <!-- Job 1 -->
-          <div class="exp-item">
-            <div class="exp-header-row1">
-              <span>Zeesofttech</span>
-              <span class="exp-location">Islamabad, Pakistan</span>
-            </div>
-            <div class="exp-header-row2">
-              <span>SQA Team Lead | Senior SQA Engineer</span>
-              <span class="exp-date">10/2024 – Present</span>
-            </div>
-            <ul class="bullets">
-              <li>Lead end-to-end QA operations across Android, iOS, and web platforms, managing test planning, defect lifecycles via JIRA/GitLab, and team mentorship to ensure reliable releases.</li>
-              <li>Developed automated test suites using the Antigravity framework to streamline application workflows and significantly reduce manual regression time.</li>
-            </ul>
-          </div>
-
-          <!-- Job 2 -->
-          <div class="exp-item">
-            <div class="exp-header-row1">
-              <span>Zeesofttech</span>
-              <span class="exp-location">Islamabad, Pakistan</span>
-            </div>
-            <div class="exp-header-row2">
-              <span>Software Quality Assurance Engineer Intern</span>
-              <span class="exp-date">05/2024 – 10/2024</span>
-            </div>
-            <ul class="bullets">
-              <li>Authored and executed structured test plans, scenarios, and bug reports across native Android and iOS apps, performing functional, regression, UI/UX, and Postman API testing.</li>
-              <li>Tracked and prioritized defect lifecycles via JIRA and GitLab, analyzing quality metrics and collaborating with cross-functional teams to streamline sprint releases.</li>
-            </ul>
-          </div>
-
-          <!-- Job 3 -->
-          <div class="exp-item">
-            <div class="exp-header-row1">
-              <span>Terasharp</span>
-              <span class="exp-location">Remote</span>
-            </div>
-            <div class="exp-header-row2">
-              <span>Cross-Platform Mobile Application Developer</span>
-              <span class="exp-date">11/2023 – 04/2024</span>
-            </div>
-            <ul class="bullets">
-              <li>Developed and maintained responsive cross-platform mobile applications for Android and iOS using Flutter and Dart, integrating RESTful APIs for seamless backend synchronization.</li>
-              <li>Collaborated with UI/UX designers and backend engineers to optimize app performance, resolve critical bugs, and deliver stable, high-quality releases.</li>
-            </ul>
-          </div>
-
-          <!-- Job 4 -->
-          <div class="exp-item">
-            <div class="exp-header-row1">
-              <span>Terasharp</span>
-              <span class="exp-location">Remote</span>
-            </div>
-            <div class="exp-header-row2">
-              <span>Software Design & Engineering Intern</span>
-              <span class="exp-date">08/2023 – 10/2023</span>
-            </div>
-            <ul class="bullets">
-              <li>Participated in architectural discussions, requirements gathering, and rapid prototyping for multi-tier client software solutions.</li>
-              <li>Contributed to core feature implementation, routine debugging, and baseline functional testing to guarantee code stability prior to staging deployments.</li>
-            </ul>
-          </div>
-
-        </div>
-
       </div>
 
     </div>
+
+    <div class="page-footer">
+      Sabika Latif • Page 1 of 2
+    </div>
   </div>
 
-  <!-- ==================== PAGE 2 (PURE BLACK & WHITE) ==================== -->
+  <!-- ==================== PAGE 2 ==================== -->
   <div class="page">
-    <div class="grid-container">
+    <div class="content-flow">
       
-      <!-- LEFT SIDEBAR CONTINUATION -->
-      <div class="left-col">
-        <!-- Highlights Box -->
-        <div>
-          <div class="section-header">
-            <div class="section-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            </div>
-            <div class="section-title">Key Strengths</div>
+      <!-- KEY VERIFIED MOBILE PROJECTS -->
+      <div>
+        <div class="section-title">Key Verified Mobile Projects (App Store & Google Play)</div>
+
+        <!-- Project 1 -->
+        <div class="exp-item">
+          <div class="exp-header-row1">
+            <span>AI Math Solver & Scanner App</span>
+            <span class="exp-location">iOS & Android</span>
           </div>
-          <ul class="skills-list">
-            <li>End-to-End QA Leadership</li>
-            <li>Mobile App Store Releases</li>
-            <li>Antigravity Automation</li>
-            <li>Postman API Verification</li>
-            <li>Defect Triage & Reporting</li>
-            <li>Agile / Scrum Collaboration</li>
-            <li>Flutter Cross-Platform Insight</li>
+          <div class="exp-header-row2">
+            <span>SQA Engineer (OCR Vision & REST API QA)</span>
+            <span class="exp-date">Store Published</span>
+          </div>
+          <ul class="bullets">
+            <li>Conducted end-to-end QA across iOS and Android, validating camera OCR recognition accuracy, AI solution precision, and equation scanning workflows.</li>
+            <li>Verified RESTful APIs via Postman, audited in-app purchase and subscription flows on App Store and Google Play, and logged defects in GitLab.</li>
+            <li>Performed performance and regression testing to optimize memory usage, solve edge-case latency, and ensure cross-device UI stability.</li>
+          </ul>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="exp-item">
+          <div class="exp-header-row1">
+            <span>AI Voice Typing Keyboard</span>
+            <span class="exp-location">Android</span>
+          </div>
+          <div class="exp-header-row2">
+            <span>SQA Engineer (Test Automation & Speech QA)</span>
+            <span class="exp-date">Store Published</span>
+          </div>
+          <ul class="bullets">
+            <li>Developed automation test scripts using the Antigravity framework to validate multilingual keyboard layouts, character mappings, and automated UI workflows across Android devices.</li>
+            <li>Executed end-to-end QA for voice recognition accuracy across accents, real-time speech-to-text latency, and cloud-based AI text generation APIs via Postman.</li>
+            <li>Validated background service stability, memory consumption during prolonged audio streaming, and defect lifecycles using JIRA and GitLab.</li>
+          </ul>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="exp-item">
+          <div class="exp-header-row1">
+            <span>Advanced English Dictionary & Voice Translator</span>
+            <span class="exp-location">iOS & Android</span>
+          </div>
+          <div class="exp-header-row2">
+            <span>SQA Engineer (Data Persistence & Audio QA)</span>
+            <span class="exp-date">Store Published</span>
+          </div>
+          <ul class="bullets">
+            <li>Executed functional and regression testing across core modules including offline local SQLite database lookups, camera text extraction, and multilingual translation workflows.</li>
+            <li>Validated audio playback speed controls, home screen widget synchronization (Word of the Day), and bookmarking search history data persistence.</li>
+            <li>Tested monetization flows including in-app purchases (monthly/yearly subscriptions, ad removal) and handled cross-device layout validation on iPhone and iPad.</li>
+          </ul>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="exp-item">
+          <div class="exp-header-row1">
+            <span>Pronounce & Spell Checker AI</span>
+            <span class="exp-location">iOS</span>
+          </div>
+          <div class="exp-header-row2">
+            <span>SQA Engineer (Phonetic Voice & Compliance QA)</span>
+            <span class="exp-date">Store Published</span>
+          </div>
+          <ul class="bullets">
+            <li>Validated core speech recognition (STT) and text-to-speech (TTS) playback quality, ensuring accurate pronunciation rendering and latency across diverse accents.</li>
+            <li>Executed end-to-end testing for OCR camera scanning, offline/online dictionary queries, and live two-way voice translation APIs using Postman.</li>
+            <li>Performed compatibility and compliance testing across iOS versions, validating App Tracking Transparency (ATT), GDPR consent flows, and in-app purchase subscriptions.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- ACADEMIC / TEACHING EXPERIENCE -->
+      <div>
+        <div class="section-title">Academic Experience</div>
+        <div class="exp-item">
+          <div class="exp-header-row1">
+            <span>International Islamic University</span>
+            <span class="exp-location">Islamabad, Pakistan</span>
+          </div>
+          <div class="exp-header-row2">
+            <span>Teaching Assistant</span>
+            <span class="exp-date">02/2023 – 07/2023</span>
+          </div>
+          <ul class="bullets">
+            <li><strong>Course Instruction Support:</strong> Supported university instructors for Social Media Marketing and Technical Writing courses during on-site classes.</li>
+            <li><strong>Assignment & Exam Grading:</strong> Reviewed and graded student technical projects, quizzes, and writing tasks with detailed constructive feedback.</li>
+            <li><strong>Student Mentorship:</strong> Assisted students in mastering core technical communication, project documentation, and marketing strategies during dedicated office hours.</li>
           </ul>
         </div>
       </div>
 
-      <!-- RIGHT MAIN COLUMN CONTINUATION -->
-      <div class="right-col">
-        
-        <!-- EXPERIENCE CONTINUED: Teaching Assistant -->
-        <div>
-          <div class="section-header">
-            <div class="section-icon">
-              <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
-            </div>
-            <div class="section-title">Experience</div>
-          </div>
-
-          <div class="exp-item">
-            <div class="exp-header-row1">
-              <span>International Islamic University</span>
-              <span class="exp-location">Islamabad</span>
-            </div>
-            <div class="exp-header-row2">
-              <span>Teaching Assistant</span>
-              <span class="exp-date">02/2023 – 07/2023</span>
-            </div>
-            <ul class="bullets">
-              <li><strong>Assisted in Teaching:</strong> Supported instructors for Social Media Marketing and Technical Writing courses during on-site classes.</li>
-              <li><strong>Graded Assignments:</strong> Reviewed and graded student projects, quizzes, and writing tasks with clear feedback.</li>
-              <li><strong>Student Support:</strong> Helped students understand core marketing strategies and professional writing concepts during office hours.</li>
-            </ul>
-          </div>
+      <!-- LANGUAGES -->
+      <div>
+        <div class="section-title">Languages</div>
+        <div style="display: flex; justify-content: space-between; font-size: 8.8px; color: #111827; font-weight: 700; margin-top: 1mm;">
+          <span>English</span>
+          <span style="font-weight: 500; color: #4b5563;">Professional Working Proficiency</span>
         </div>
-
-        <!-- EDUCATION -->
-        <div>
-          <div class="section-header">
-            <div class="section-icon">
-              <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-            </div>
-            <div class="section-title">Education</div>
-          </div>
-
-          <div class="edu-item">
-            <div class="edu-header-row1">
-              <span>International Islamic University</span>
-              <span class="exp-location">Islamabad</span>
-            </div>
-            <div class="edu-header-row2">
-              <span>Bachelor's of Science in Software Engineering</span>
-              <span class="exp-date">2018 – 2022</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- KEY VERIFIED MOBILE PROJECTS (STORE PUBLISHED) -->
-        <div>
-          <div class="section-header">
-            <div class="section-icon">
-              <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
-            </div>
-            <div class="section-title">Key Verified Mobile Projects</div>
-          </div>
-
-          <!-- Project 1 -->
-          <div class="exp-item">
-            <div class="exp-header-row1">
-              <span>AI Math Solver & Scanner App</span>
-              <span class="exp-location">iOS & Android</span>
-            </div>
-            <div class="exp-header-row2">
-              <span>SQA Engineer (OCR Vision & API QA)</span>
-              <span class="exp-date">Store Published</span>
-            </div>
-            <ul class="bullets">
-              <li>Validated camera OCR mathematical recognition accuracy, equation solving precision, and cloud AI API endpoints via Postman.</li>
-              <li>Audited in-app purchases (IAP) on App Store & Google Play, logging edge-case defects in GitLab.</li>
-            </ul>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="exp-item">
-            <div class="exp-header-row1">
-              <span>AI Voice Typing Keyboard</span>
-              <span class="exp-location">Android</span>
-            </div>
-            <div class="exp-header-row2">
-              <span>SQA Engineer (Test Automation & Speech QA)</span>
-              <span class="exp-date">Store Published</span>
-            </div>
-            <ul class="bullets">
-              <li>Developed Antigravity automation test scripts to validate multilingual keyboards and speech-to-text latency.</li>
-              <li>Verified background audio service reliability, memory consumption, and defect lifecycles in JIRA.</li>
-            </ul>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="exp-item">
-            <div class="exp-header-row1">
-              <span>Advanced English Dictionary & Voice Translator</span>
-              <span class="exp-location">iOS & Android</span>
-            </div>
-            <div class="exp-header-row2">
-              <span>SQA Engineer (Data Persistence & Audio QA)</span>
-              <span class="exp-date">Store Published</span>
-            </div>
-            <ul class="bullets">
-              <li>Tested offline SQLite database synchronization, TTS audio pronunciation quality, and home screen widgets.</li>
-            </ul>
-          </div>
-
-        </div>
-
       </div>
 
+    </div>
+
+    <div class="page-footer">
+      Sabika Latif • Page 2 of 2
     </div>
   </div>
 
