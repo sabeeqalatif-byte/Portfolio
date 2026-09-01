@@ -2,11 +2,10 @@
 
 import React, { useState } from "react";
 import { contactInfo } from "@/data/portfolioData";
-import { Mail, Phone, Linkedin, MapPin, Copy, Check, Send } from "lucide-react";
+import { Mail, Github, Linkedin, MapPin, Copy, Check, Send } from "lucide-react";
 
 export default function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [copiedPhone, setCopiedPhone] = useState(false);
 
   const handleCopyEmail = async () => {
     try {
@@ -14,18 +13,6 @@ export default function Contact() {
         await navigator.clipboard.writeText(contactInfo.email);
         setCopiedEmail(true);
         setTimeout(() => setCopiedEmail(false), 2500);
-      }
-    } catch {
-      // Fallback
-    }
-  };
-
-  const handleCopyPhone = async () => {
-    try {
-      if (navigator.clipboard) {
-        await navigator.clipboard.writeText(contactInfo.phone);
-        setCopiedPhone(true);
-        setTimeout(() => setCopiedPhone(false), 2500);
       }
     } catch {
       // Fallback
@@ -92,44 +79,25 @@ export default function Contact() {
             </button>
           </div>
 
-          {/* Phone Card with Copy Feature */}
-          <div className="theme-card rounded-2xl p-5 flex items-center justify-between gap-4">
-            <div className="flex items-center gap-3.5 overflow-hidden">
-              <div className="w-11 h-11 rounded-xl bg-[#bafdc5]/20 border border-[#94ca9d]/35 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] flex-shrink-0">
-                <Phone className="w-5 h-5 text-[#58795e] dark:text-[#bafdc5]" />
+          {/* GitHub Card */}
+          <a
+            href={contactInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="theme-card rounded-2xl p-5 flex items-center gap-3.5 group transition-all"
+          >
+            <div className="w-11 h-11 rounded-xl bg-[#bafdc5]/20 border border-[#94ca9d]/35 flex items-center justify-center text-[#2c3c2f] dark:text-[#bafdc5] group-hover:scale-105 transition-all flex-shrink-0">
+              <Github className="w-5 h-5 text-[#58795e] dark:text-[#bafdc5]" />
+            </div>
+            <div className="overflow-hidden">
+              <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
+                GitHub
               </div>
-              <div className="overflow-hidden">
-                <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider font-bold">
-                  Phone
-                </div>
-                <a
-                  href={`tel:${contactInfo.phone}`}
-                  className="text-sm font-bold text-[var(--text-heading)] hover:text-[#58795e] dark:hover:text-[#bafdc5] transition-colors truncate block font-mono"
-                >
-                  {contactInfo.phone}
-                </a>
+              <div className="text-sm font-bold text-[var(--text-heading)] group-hover:text-[#58795e] dark:group-hover:text-[#bafdc5] transition-colors truncate">
+                github.com/sabeeqalatif-byte
               </div>
             </div>
-
-            <button
-              type="button"
-              onClick={handleCopyPhone}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-bold theme-badge hover:scale-105 transition-transform flex-shrink-0"
-              aria-label="Copy phone number"
-            >
-              {copiedPhone ? (
-                <>
-                  <Check className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
-                  <span className="text-[#58795e] dark:text-[#bafdc5]">Copied</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-3.5 h-3.5 text-[#58795e] dark:text-[#bafdc5]" />
-                  <span>Copy</span>
-                </>
-              )}
-            </button>
-          </div>
+          </a>
 
           {/* LinkedIn Card */}
           <a

@@ -57,7 +57,7 @@ export interface EducationItem {
 }
 
 export interface ContactInfo {
-  phone: string;
+  phone?: string;
   email: string;
   linkedin: string;
   github: string;
@@ -655,7 +655,6 @@ export const expertiseAreas: ExpertiseArea[] = [
 ];
 
 export const contactInfo: ContactInfo = {
-  phone: "+923095945909",
   email: "sabikalatif2@gmail.com",
   linkedin: "https://www.linkedin.com/in/sabika-latif",
   github: "https://github.com/sabeeqalatif-byte",
