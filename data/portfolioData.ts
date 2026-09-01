@@ -8,15 +8,23 @@ export interface SkillCategory {
   skills: string[];
 }
 
-export interface ExperienceItem {
-  id: string;
-  role: string;
-  company: string;
-  location: string;
+export interface ExperienceRole {
+  title: string;
+  type: "Promotion" | "Job" | "Full-time Job" | "Internship" | "Academic Role" | string;
   period: string;
   responsibilities: string[];
   skills: string[];
 }
+
+export interface CompanyExperience {
+  id: string;
+  company: string;
+  location: string;
+  period: string;
+  roles: ExperienceRole[];
+}
+
+export type ExperienceItem = CompanyExperience;
 
 export interface ProjectItem {
   id: string;
@@ -143,68 +151,94 @@ export const skillCategories: SkillCategory[] = [
   },
 ];
 
-export const experiences: ExperienceItem[] = [
+export const experiences: CompanyExperience[] = [
   {
-    id: "exp-1",
-    role: "SQA Team Lead | Senior SQA Engineer",
+    id: "exp-zeesofttech",
     company: "Zeesofttech",
     location: "Islamabad, Pakistan",
-    period: "10/2024 – Present",
-    responsibilities: [
-      "Lead end-to-end QA across iOS, Android, and Web platforms, managing test planning and defect triage in JIRA/GitLab.",
-      "Developed automated regression suites with Antigravity framework, cutting regression cycle execution time.",
-      "Spearheaded QA sign-offs for 15+ live mobile apps published on the Apple App Store and Google Play Store.",
+    period: "05/2024 – Present",
+    roles: [
+      {
+        title: "SQA Team Lead",
+        type: "Promotion",
+        period: "06/2026 – Present",
+        responsibilities: [
+          "Lead end-to-end QA operations across iOS, Android, and Web platforms, managing test planning, sprint releases, and defect triage in JIRA and GitLab.",
+          "Spearhead QA sign-offs for 15+ live mobile applications published on the Apple App Store and Google Play Store.",
+          "Champion automated testing initiatives using the Antigravity framework to accelerate regression cycles and improve release stability.",
+          "Mentor QA engineers and coordinate with cross-functional development teams to enforce quality standards throughout the SDLC.",
+        ],
+        skills: ["Antigravity Automation", "Team Leadership", "iOS & Android QA", "JIRA", "GitLab", "CI/CD & Release Gates"],
+      },
+      {
+        title: "Software Quality Assurance Engineer",
+        type: "Full-time Job",
+        period: "10/2024 – 06/2026",
+        responsibilities: [
+          "Executed comprehensive manual, functional, regression, UI/UX, and Postman REST API testing across live mobile and web apps.",
+          "Validated camera OCR parsing, speech-to-text audio streams, and in-app purchase (IAP) monetization flows.",
+          "Authored structured test plans, test suites, and defect reports, driving root-cause analysis and defect lifecycles in JIRA.",
+        ],
+        skills: ["Manual QA", "REST API Testing", "Postman", "Mobile QA", "Regression Testing", "Test Case Design"],
+      },
+      {
+        title: "Software Quality Assurance Engineer Intern",
+        type: "Internship",
+        period: "05/2024 – 10/2024",
+        responsibilities: [
+          "Authored test cases and performed functional, exploratory, regression, and UI/UX validation across mobile apps.",
+          "Verified core mobile app workflows, identified boundary defects, and collaborated with developers for rapid resolution.",
+          "Tracked and prioritized defects in JIRA and GitLab for weekly sprint deployments.",
+        ],
+        skills: ["Test Plans & Scenarios", "Postman", "Mobile QA", "JIRA", "GitLab", "Exploratory QA"],
+      },
     ],
-    skills: ["Antigravity Automation", "iOS & Android QA", "JIRA", "GitLab", "CI/CD", "Team Leadership"],
   },
   {
-    id: "exp-2",
-    role: "Software Quality Assurance Engineer Intern",
-    company: "Zeesofttech",
-    location: "Islamabad, Pakistan",
-    period: "05/2024 – 10/2024",
-    responsibilities: [
-      "Authored structured test cases and performed functional, regression, UI/UX, and Postman API testing.",
-      "Validated camera OCR parsing, speech-to-text audio streams, and in-app purchase monetization flows.",
-      "Tracked and prioritized high-severity defects in JIRA and GitLab for sprint release cycles.",
-    ],
-    skills: ["Test Plans & Scenarios", "Postman", "Mobile QA", "JIRA", "GitLab", "Regression Testing"],
-  },
-  {
-    id: "exp-3",
-    role: "Cross-Platform Mobile Application Developer",
+    id: "exp-terasharp",
     company: "Terasharp",
     location: "Remote",
-    period: "11/2023 – 04/2024",
-    responsibilities: [
-      "Developed cross-platform mobile apps for Android and iOS using Flutter and Dart with RESTful API backend integrations.",
-      "Collaborated with designers and engineers to optimize app performance and resolve cross-platform UI defects.",
+    period: "08/2023 – 04/2024",
+    roles: [
+      {
+        title: "Cross-Platform Mobile Application Developer",
+        type: "Job",
+        period: "11/2023 – 04/2024",
+        responsibilities: [
+          "Developed and maintained cross-platform mobile apps for Android and iOS using Flutter and Dart with RESTful API integrations.",
+          "Collaborated with UI/UX designers and backend developers to optimize rendering performance and fix cross-platform UI glitches.",
+        ],
+        skills: ["Flutter", "Dart", "RESTful APIs", "State Management", "Bug Fixing"],
+      },
+      {
+        title: "Software Design & Engineering Intern",
+        type: "Internship",
+        period: "08/2023 – 10/2023",
+        responsibilities: [
+          "Participated in requirements gathering, architectural design, and rapid prototyping for multi-tier client solutions.",
+          "Contributed to core feature implementation, debugging, and baseline functional verification prior to deployment.",
+        ],
+        skills: ["Prototyping", "Functional QA", "Debugging", "Software Design"],
+      },
     ],
-    skills: ["Flutter", "Dart", "RESTful APIs", "State Management", "Bug Fixing"],
   },
   {
-    id: "exp-4",
-    role: "Software Design & Engineering Intern",
-    company: "Terasharp",
-    location: "Remote",
-    period: "08/2023 – 10/2023",
-    responsibilities: [
-      "Participated in requirements gathering, architectural design, and rapid prototyping for client solutions.",
-      "Contributed to core feature implementation, debugging, and baseline functional verification.",
-    ],
-    skills: ["Prototyping", "Functional QA", "Debugging", "Software Design"],
-  },
-  {
-    id: "exp-5",
-    role: "Teaching Assistant",
+    id: "exp-iiui",
     company: "International Islamic University",
     location: "Islamabad, Pakistan",
     period: "02/2023 – 07/2023",
-    responsibilities: [
-      "Assisted instructors in Social Media Marketing and Technical Writing course instruction.",
-      "Graded technical assignments and student projects, providing constructive quality feedback.",
+    roles: [
+      {
+        title: "Teaching Assistant",
+        type: "Academic Role",
+        period: "02/2023 – 07/2023",
+        responsibilities: [
+          "Assisted instructors in Social Media Marketing and Technical Writing course instruction.",
+          "Graded technical assignments and student projects, providing constructive quality feedback and student mentorship.",
+        ],
+        skills: ["Technical Writing", "Academic Mentorship", "Communication"],
+      },
     ],
-    skills: ["Technical Writing", "Academic Mentorship", "Communication"],
   },
 ];
 
