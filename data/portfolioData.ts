@@ -84,8 +84,8 @@ export const personalData = {
     ],
   },
   resume: {
-    viewPath: "/resume/Sabika-Latif-Resume.pdf",
-    downloadPath: "/resume/Sabika-Latif-Resume.pdf",
+    viewPath: "/resume/Sabika-Latif-Resume.pdf?v=2.0",
+    downloadPath: "/resume/Sabika-Latif-Resume.pdf?v=2.0",
     fileName: "Sabika-Latif-Resume.pdf",
   },
 };
